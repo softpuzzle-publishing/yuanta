@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>유안타증권 운영관제</title>
+
+    <!-- chartjs -->
+    <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
+    <!-- Bootstrap & Template style -->
+    <link rel="stylesheet" href="../../resources/css/AdminLte.css">
+    <!-- Yuanta style -->
+    <link rel="stylesheet" href="../../resources/css/yuanta.css">
+    <!-- Additional style -->
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+</head>
+
+<body class="sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-dark">
+            <!-- Mobile logo -->
+            <a href="../global_total/global_total.html" class="brand-logo-mobile d-lg-none">
+                <i class="icon-logo"><span class="sr-only">유안타증권</span></i>
+            </a>
+
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" data-widget="pushmenu"  role="button"><i class="icon-menu"></i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item d-none d-lg-block">
+                    <p class="welcome">
+                        Hello,  <strong>johndoe123</strong>
+                    </p>
+                </li>
+                <li class="nav-item">
+                    <a href="../login/login.html" class="btn-logout"><i class="icon-logout"><span class="sr-only">logout</span></i></a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="../global_total/global_total.html" class="brand-link">
+                <i class="icon-logo"><span class="sr-only">유안타증권</span></i>
+            </a>
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav>
+                    <ul class="nav nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
+                        <li class="nav-item">
+                            <a href="../global_total/global_total.html" class="nav-link active">
+                                <i class="nav-icon icon-global"></i>
+                                <p>
+                                    Global Total
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon icon-regional"></i>
+                                <p>
+                                    Regional
+                                    <i class="right icon-plus"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon icon-country"></i>
+                                <p>
+                                    Country
+                                    <i class="right icon-plus"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <p>
+                                            EU
+                                            <i class="right icon-s-arr-down"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="../country/country.html" class="nav-link">
+                                                <p>Germany</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>United Kingdom</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Italy</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>France</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Spain</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Poland</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Czech</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Netherlands</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Italy</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Turkey</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Austria</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Belgium</p>
+                                            </a>
+                                        </li>
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>Denmark</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <p>
+                                            APAC
+                                            <i class="right icon-s-arr-down"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>level 3</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <p>
+                                            MEA
+                                            <i class="right icon-s-arr-down"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>level 3</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <p>
+                                            CIS
+                                            <i class="right icon-s-arr-down"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>level 3</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <p>
+                                            China
+                                            <i class="right icon-s-arr-down"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>level 3</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <p>
+                                            India
+                                            <i class="right icon-s-arr-down"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>level 3</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <p>
+                                            North America
+                                            <i class="right icon-s-arr-down"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>level 3</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="nav-item has-treeview">
+                                    <a href="#" class="nav-link">
+                                        <p>
+                                            Latin America
+                                            <i class="right icon-s-arr-down"></i>
+                                        </p>
+                                    </a>
+                                    <ul class="nav nav-treeview">
+                                        <li class="nav-item">
+                                            <a href="#" class="nav-link">
+                                                <p>level 3</p>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../statistic/statistic.html" class="nav-link">
+                                <i class="nav-icon icon-statistic"></i>
+                                <p>
+                                    Statistic
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="../administration/account_management.html" class="nav-link">
+                                <i class="nav-icon icon-admin"></i>
+                                <p>
+                                    Administration
+                                </p>
+                            </a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header">
+                <h1>Global Total</h1>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><i class="icon-home"></i></li>
+                    <li class="breadcrumb-item active">Global Total</li>
+                </ol>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content-body">
+                <div class="content">
+                    <div class="container-fluid">
+
+                        <!-- 실 컨텐츠 -->
+                        <div id="guide">
+                            <h1>유안타증권 운영관제 리뉴얼 가이드</h1>
+                            <section>
+                                <h2>Icon</h2>
+                                <div style="background: rgba(0,0,0,0.25);padding: 10px;">
+                                    <i class="icon-logo-sm"></i>
+                                    <i class="icon-logo"></i>
+                                    <i class="icon-menu"></i>
+                                    <i class="icon-logout"></i>
+                                    <i class="icon-global"></i>
+                                    <i class="icon-regional"></i>
+                                    <i class="icon-country"></i>
+                                    <i class="icon-statistic"></i>
+                                    <i class="icon-admin"></i>
+                                    <i class="icon-plus"></i>
+                                    <i class="icon-minus"></i>
+                                    <i class="icon-s-arr-down"></i>
+                                    <i class="icon-home"></i>
+                                    <i class="icon-trophy"></i>
+                                    <i class="icon-clock"></i>
+                                    <i class="icon-search"></i>
+                                    <i class="icon-prev"></i>
+                                    <i class="icon-next"></i>
+                                    <i class="icon-import"></i>
+                                    <i class="icon-s-add"></i>
+                                    <i class="icon-s-minus"></i>
+                                    <i class="icon-refresh"></i>
+                                    <i class="icon-photo"></i>
+                                    <i class="icon-close"></i>
+                                    <i class="icon-top"></i>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>버튼</h2>
+                                <div>
+                                    <button type="button" class="btn btn-secondary btn-block">버튼(block)</button>
+                                    <button type="button" class="btn btn-primary">버튼</button>
+                                    <button type="button" class="btn btn-success">버튼</button>
+                                    <button type="button" class="btn btn-info">버튼</button>
+                                    <button type="button" class="btn btn-danger">버튼</button>
+                                    <button type="button" class="btn btn-light">more</button>
+                                    <button type="button" class="btn btn-outline-primary">버튼</button>
+                                    <button type="button" class="btn btn-outline-success">버튼</button>
+                                    <button type="button" class="btn btn-outline-info">버튼</button>
+                                    <button type="button" class="btn btn-outline-danger">버튼</button>
+                                    <button type="button" class="btn btn-outline-light">버튼</button>
+                                    <button type="button" class="btn btn-sm btn-primary">버튼</button>
+                                    <button type="button" class="btn btn-sm btn-success">버튼</button>
+                                    <button type="button" class="btn btn-sm btn-info">버튼</button>
+                                    <button type="button" class="btn btn-sm btn-danger">버튼</button>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>버튼 그룹</h2>
+                                <div>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-primary">PDF</button>
+                                        <button type="button" class="btn btn-outline-light">Excel</button>
+                                        <button type="button" class="btn btn-outline-light">JPG</button>
+                                        <button type="button" class="btn btn-outline-light">Print</button>
+                                    </div>
+                                    <div class="btn-group btn-group-icon" role="group">
+                                        <button type="button" class="btn btn-primary"><i class="icon-trophy"></i></button>
+                                        <button type="button" class="btn btn-outline-light"><i class="icon-clock"></i></button>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>Form</h2>
+                                <div>
+                                    <input type="text" class="form-control">
+                                    <select name="" id="" class="form-control">
+                                        <option value="">10</option>
+                                        <option value="">20</option>
+                                    </select>
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="Search">
+                                        <span class="input-group-append">
+                                            <button class="btn btn-primary"><i class="icon-search"><span class="sr-only">SEARCH</span></i></button>
+                                        </span>
+                                    </div>
+                                </div>
+                                <div>
+                                    <label class="custom-control custom-control-checkbox-square">
+                                        <input type="checkbox" id="" name=""><span>Remember me</span><i></i>
+                                    </label>
+
+                                    <label class="custom-control custom-control-checkbox-secondary">
+                                        <input type="checkbox" id="" name=""><b>Select All</b><i></i>
+                                    </label>
+
+                                    <label class="custom-control custom-control-checkbox-primary">
+                                        <input type="checkbox" id="" name=""><span class="text-primary">North America</span><i></i>
+                                    </label>
+
+                                    <label class="custom-control custom-control-radio">
+                                        <input type="radio" id="a1" name="Activation"><span>Activation</span><i></i>
+                                    </label>
+                                    <label class="custom-control custom-control-radio">
+                                        <input type="radio" id="a2" name="Activation"><span>Deactivation</span><i></i>
+                                    </label>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>Text</h2>
+                                <div>
+                                    <span class="text-primary">텍스트 컬러</span>
+                                    <span class="text-secondary">텍스트 컬러</span>
+                                    <span class="text-info">텍스트 컬러</span>
+                                    <span class="text-success">텍스트 컬러</span>
+                                    <span class="text-danger">텍스트 컬러</span>
+                                    <a href="#none" class="text-underline">텍스트 underline</a>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>Align</h2>
+                                <div>
+                                    <div class="text-left">텍스트 정렬</div>
+                                    <div class="text-center">텍스트 정렬</div>
+                                    <div class="text-right">텍스트 정렬</div>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>Tab</h2>
+                                <div>
+                                    <nav class="main-tab">
+                                        <ul class="nav nav-tabs" role="tablist">
+                                            <li class="nav-item">
+                                                <a class="nav-link active" data-toggle="pill" href="#t1" role="tab">Sales</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link" data-toggle="pill" href="#t2" role="tab">Service</a>
+                                            </li>
+                                        </ul>
+                                    </nav>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>Card</h2>
+                                <div>
+                                    <div class="card card-primary card-outline">
+                                        <div class="card-body">
+                                            카드 내용
+                                        </div>
+                                    </div>
+                                </div>
+                            </section>
+                            <section>
+                                <h2>Table</h2>
+                                <div>
+                                    <table class="table table-bordered table-mobile-normal">
+                                        <caption>Driver Evaluation Table</caption>
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center"></th>
+                                                <th class="text-center">Performance (Act/Pos)</th>
+                                                <th class="text-center">Driver Evaluation</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center mobile-subject">First point of contact</td>
+                                                <td class="text-center" data-label="Performance (Act/Pos)">2/3</td>
+                                                <td class="text-center" data-label="Driver Evaluation">5</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center mobile-subject">First point of contact</td>
+                                                <td class="text-center" data-label="Performance (Act/Pos)">2/3</td>
+                                                <td class="text-center" data-label="Driver Evaluation">5</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </section>
+                        </div>
+                        <!-- //실 컨텐츠 -->
+
+                    </div>
+                </div>
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+        <!-- Main Footer -->
+        <footer class="main-footer">
+            <div class="btn-top"><button type="button"><i class="icon-top"><span class="sr-only">TOP</span></i></button></div>
+        </footer>
+    </div>
+    <!-- ./wrapper -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart.js/Chart.min.js"></script>
+    <!-- ui -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+        window.onload = function() {
+            //Chart : Performance - Global
+            var ChartGlobal = document.getElementById('chart-global').getContext('2d');
+            window.myChart1 = new Chart(ChartGlobal, {
+                type: 'bar',
+				data: ChartGlobalData,
+				options: {
+                    responsive: false,
+                    maintainAspectRatio: true,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            fontColor : '#000000',
+                            fontSize : 13,
+                            fontFamily : 'Noto Sans KR',
+                            usePointStyle: true,
+                            boxWidth: 8,
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            maxBarThickness: 50,
+                            gridLines: {
+                                display: false,
+                                color: "black"
+                            },
+                            ticks: {
+                                fontColor : '#000000',
+                                fontSize : 13,
+                                fontFamily : 'Noto Sans KR',
+                                fontWeight : 400,
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                max: 100,
+                                stepSize: 20,
+                                fontColor : '#e4dcd3',
+                                fontSize : 13,
+                                fontFamily : 'Noto Sans KR',
+                                fontWeight : 400,
+                            }
+                        }]
+                    }
+                }
+            });
+            //Chart : Performance - bu Regional
+            var ChartRegional = document.getElementById('chart-regional').getContext('2d');
+            window.myChart2 = new Chart(ChartRegional, {
+                type: 'bar',
+				data: ChartRegionalData,
+				options: {
+                    responsive: false,
+                    maintainAspectRatio: true,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            fontColor : '#000000',
+                            fontSize : 13,
+                            fontFamily : 'Noto Sans KR',
+                            usePointStyle: true,
+                            boxWidth: 8,
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            maxBarThickness: 50,
+                            gridLines: {
+                                display: false,
+                            },
+                            ticks: {
+                                fontColor : '#000000',
+                                fontSize : 13,
+                                fontFamily : 'Noto Sans KR',
+                            }
+                        }],
+                        yAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                max: 100,
+                                stepSize: 20,
+                                fontColor : '#e4dcd3',
+                                fontSize : 13,
+                                fontFamily : 'Noto Sans KR',
+                            }
+                        }]
+                    }
+                }
+            });
+            //Chart : Driver Performance
+            var ChartDriver = document.getElementById('chart-driver').getContext('2d');
+            window.myChart3 = new Chart(ChartDriver, {
+                type: 'radar',
+				data: ChartDriverData,
+				options: {
+                    responsive: false,
+                    maintainAspectRatio: true,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            fontColor : '#000000',
+                            fontSize : 13,
+                            fontFamily : 'Noto Sans KR',
+                            usePointStyle: true,
+                            boxWidth: 8,
+                        }
+                    },
+                    elements: {
+                        line: {
+                            borderWidth: 1,
+                        },
+                        point: {
+                            backgroundColor: ['#e4dcd3','#002c5f','#b74b37'],
+                            radius: 1,
+                            pointStyle: 'circle',
+                            hoverRadius: 3,
+                        }
+                    },
+                }
+            });
+            //Chart : NPSl
+            var ChartNpsi = document.getElementById('chart-npsi').getContext('2d');
+            window.myChart4 = new Chart(ChartNpsi, {
+                type: 'horizontalBar',
+				data: ChartNpsiData,
+				options: {
+                    responsive: false,
+                    maintainAspectRatio: true,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            fontColor : '#000000',
+                            fontSize : 13,
+                            fontFamily : 'Noto Sans KR',
+                            usePointStyle: true,
+                            boxWidth: 8,
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                max: 100,
+                                stepSize: 20,
+                                fontColor : '#e4dcd3',
+                                fontSize : 13,
+                                fontFamily : 'Noto Sans KR',
+                                fontWeight : 400,
+                            }
+                        }],
+                        yAxes: [{
+                            maxBarThickness: 30,
+                            gridLines: {
+                                display: false,
+                            },
+                            ticks: {
+                                fontColor : '#000000',
+                                fontSize : 13,
+                                fontFamily : 'Noto Sans KR',
+                                fontWeight : 400,
+                            }
+                        }]
+                    }
+                }
+            });
+            //Chart : Emotional Engagement
+            var ChartEngagement = document.getElementById('chart-engagement').getContext('2d');
+            window.myChart5 = new Chart(ChartEngagement, {
+                type: 'horizontalBar',
+				data: ChartEngagementData,
+				options: {
+                    responsive: false,
+                    maintainAspectRatio: true,
+                    legend: {
+                        position: 'bottom',
+                        labels: {
+                            fontColor : '#000000',
+                            fontSize : 13,
+                            fontFamily : 'Noto Sans KR',
+                            usePointStyle: true,
+                            boxWidth: 8,
+                        }
+                    },
+                    scales: {
+                        xAxes: [{
+                            ticks: {
+                                beginAtZero: true,
+                                max: 100,
+                                stepSize: 20,
+                                fontColor : '#e4dcd3',
+                                fontSize : 13,
+                                fontFamily : 'Noto Sans KR',
+                                fontWeight : 400,
+                            }
+                        }],
+                        yAxes: [{
+                            maxBarThickness: 30,
+                            gridLines: {
+                                display: false,
+                            },
+                            ticks: {
+                                fontColor : '#000000',
+                                fontSize : 13,
+                                fontFamily : 'Noto Sans KR',
+                                fontWeight : 400,
+                            }
+                        }]
+                    }
+                }
+            });
+        }
+
+        var ChartGlobalData = {
+            labels: ['Global'],
+			datasets: [
+                {
+                    label: 'HMC 2020',
+                    backgroundColor: '#002c5f',
+                    data: [80],
+                }, {
+                    label: 'Comp. 2020',
+                    backgroundColor: '#b74b37',
+                    data: [60],
+                }
+            ]
+        };
+        var ChartRegionalData = {
+            labels: ['NA','LATAM','EU','CIS','MEA','APAC','China','India'],
+			datasets: [
+                {
+                    label: 'HMC',
+                    backgroundColor: '#002c5f',
+                    data: [80,30,40,20,90,100,40,50],
+                }
+            ]
+        };
+        var ChartDriverData = {
+            labels: ['First point of Contact','Farewell','Sales Consultation','Identifying Needs','Greeting'],
+			datasets: [
+                {
+                    label: 'EU Avg.',
+                    backgroundColor: 'rgba(228, 220, 211, 0.8)',
+                    data: [80,80,70,92,50],
+                }, {
+                    label: 'HMC',
+                    backgroundColor: 'rgba(17, 78, 149, 0.6)',
+                    data: [50,40,90,70,80],
+                }, {
+                    label: 'Competitor',
+                    backgroundColor: 'rgba(183, 75, 55, 0.5)',
+                    data: [60,80,60,90,100],
+                }
+            ]
+        };
+        var ChartNpsiData = {
+            labels: ['HMC Global','Comp. Global'],
+			datasets: [
+                {
+                    label: 'HMC',
+                    backgroundColor: '#002c5f',
+                    data: [20],
+                }, {
+                    label: 'Competitor',
+                    backgroundColor: '#b74b37',
+                    data: [80],
+                }
+            ]
+        };
+        var ChartEngagementData = {
+            labels: ['HMC Global','Comp. Global'],
+			datasets: [
+                {
+                    label: 'HMC',
+                    backgroundColor: '#002c5f',
+                    data: [20],
+                }, {
+                    label: 'Competitor',
+                    backgroundColor: '#b74b37',
+                    data: [80],
+                }
+            ]
+        };
+    </script>
+</body>
+
+</html>

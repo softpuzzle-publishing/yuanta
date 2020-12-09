@@ -1,0 +1,79 @@
+/* icons */
+[class*=icon-]{display: inline-block;background-size: contain;background-repeat: no-repeat;background-position: 50% 50%;font-size: 0;line-height: 1;}
+
+.icon-logo{background-image: url('../images/ic-logo.svg');width: 114.5px;height: 15.9px;}
+.icon-logo-sm{background-image: url('../images/ic-logo.svg');width: 30.1px;height: 15.9px;}
+.icon-close{background-image: url('../images/ic-close-white.svg');width: 30px;height: 30px;}
+.icon-arrow-down{background-image: url('../images/ic-arrow-down.svg');width: 10.5px;height: 7.2px;vertical-align: top;}
+
+.text-underline{text-decoration: underline;}
+
+select.form-control{
+    letter-spacing: -0.34px;padding-top: 5px;
+    -webkit-appearance: none;-moz-appearance: none;
+    background-position: right 13px top 50%;
+    background-repeat: no-repeat;
+    background-image: url('../images/select.svg');
+    padding-right: 40px;
+}
+@include media-breakpoint-down(md) {
+    input.form-control{font-size: 14px;}
+    select.form-control{font-size: 14px;}
+}
+
+.col-form-label{
+    font-size: 16px;font-weight: 500;line-height: 1.1;letter-spacing: -0.32px;
+    .row.align-items-center > &{padding-top: 0;padding-bottom: 0;}
+}
+
+.brand-logo-mobile{
+    display: block;position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);line-height: 1;
+    i{vertical-align: top;}
+}
+
+.btn{
+    .material-icons{vertical-align: middle;font-size: 18px;transform: translateY(-1px);}
+}
+.btn-lg{
+    .material-icons{font-size: 22px;}
+}
+
+.btn-top{
+    position: fixed;right: -60px;bottom: 20px;z-index: 1;transition: all .2s ease-in-out;
+    button{display: block;width: 36px;height: 36px;background: $primary;border-radius: 4px;border: 0;position: relative;}
+    i{position: absolute;left: 50%;top: 50%;transform: translate(-50%,-50%);}
+    html.is-scrolled &{right: 20px;transition-delay: .4s;}
+    &.moveup{bottom: 30px;transition-delay: 0s;}
+}
+@include media-breakpoint-down(md) {
+    .btn-top{
+        bottom: 15px;
+        button{width: 30px;height: 30px;}
+        html.is-scrolled &{right: 15px;}
+    }
+}
+
+
+.sub-title-area{display: flex;align-items: center;justify-content: space-between;margin-bottom: 11px;min-height: 30px;}
+.sub-title{font-size: 20px;font-weight: 500;letter-spacing: -0.4px;margin-bottom: 0;line-height: 1.4;}
+@include media-breakpoint-down(md) {
+    .sub-title-area{margin-bottom: 7px;min-height: 24px;}
+    .sub-title{font-size: 16px;}
+}
+
+.access-info{color: #7a7c8a;margin-left: 25px;}
+
+/* [data-widget="pushmenu"]{
+    display: block;background: #1d1f2d;
+    i{color: #696c79;vertical-align: top;}
+    i:hover{color: #fff;}
+} */
+
+[class^=role-]{
+    display: inline-block;border-radius: 50rem;font-weight: 700;color: #fff;padding: 0 13px;letter-spacing: -0.02em;
+}
+.role-admin{background: #00a3e6;}
+.role-user{background: #7b00e6;}
+.role-op{background: #ffbd23;}
+.role-monitoring{background: #10e600;}
+
