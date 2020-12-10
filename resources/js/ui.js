@@ -2,6 +2,7 @@ var Common = {
 	init : function(){
 		Common.scrolling();
 		Common.top();
+		Common.event();
 		window.addEventListener('mousewheel', Common.scrolling);
 		window.addEventListener('touchmove', Common.scrolling);
 
@@ -30,6 +31,19 @@ var Common = {
             $('html, body').animate({scrollTop: 0}, 300);
         });
 	},
+	event : function(){
+		//datepicker
+		$('[data-event="datepicker"]').datepicker({
+			changeMonth: true,
+            changeYear: true,
+            dateFormat: 'yy-mm-dd'
+		});
+
+		//select
+        $(".custom-select-md").each(function(){
+            $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
+        });
+	}
 };
 
 Common.init();

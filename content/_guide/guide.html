@@ -12,6 +12,8 @@
     <!-- Icon Material -->
     <script src="https://kit.fontawesome.com/54bbd61aac.js" crossorigin="anonymous"></script>
 
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.css">
     <!-- chartjs -->
     <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
     <!-- Bootstrap & Template style -->
@@ -53,7 +55,7 @@
 
             <!-- Right navbar links -->
             <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
+                <li class="nav-item d-none d-lg-block">
                     <div class="user-panel d-flex align-items-center">
                         <div class="image">
                             <img src="../../resources/images/@profile.jpg" class="img-circle elevation-2" alt="User Image">
@@ -65,7 +67,28 @@
                             <span class="role-monitoring">Monitoring</span> -->
                         </div>
                         <div class="info">
-                            <a href="#" class="d-block">홍길동</a>
+                            <a href="#" class="d-block" data-toggle="d
+                            ropdown" aria-expanded="false">홍길동</a>
+                            <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
+                                <span class="dropdown-item dropdown-header">15 Notifications</span>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-envelope mr-2"></i> 4 new messages
+                                    <span class="float-right text-muted text-sm">3 mins</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-users mr-2"></i> 8 friend requests
+                                    <span class="float-right text-muted text-sm">12 hours</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item">
+                                    <i class="fas fa-file mr-2"></i> 3 new reports
+                                    <span class="float-right text-muted text-sm">2 days</span>
+                                </a>
+                                <div class="dropdown-divider"></div>
+                                <a href="#" class="dropdown-item dropdown-footer">See All Notifications</a>
+                            </div>
                         </div>
                     </div>
                 </li>
@@ -261,18 +284,21 @@
                             <div>
                                 <button type="button" class="btn btn-flat btn-lg btn-primary">버튼</button>
                                 <button type="button" class="btn btn-flat btn-lg btn-light">버튼</button>
+                                <button type="button" class="btn btn-flat btn-lg btn-outline-light">버튼</button>
                                 <button type="button" class="btn btn-flat btn-lg btn-dark">버튼</button>
                             </div>
                             <h3>small</h3>
                             <div>
                                 <button type="button" class="btn btn-flat btn-sm btn-primary">버튼</button>
                                 <button type="button" class="btn btn-flat btn-sm btn-light">버튼</button>
+                                <button type="button" class="btn btn-flat btn-sm btn-outline-light">버튼</button>
                                 <button type="button" class="btn btn-flat btn-sm btn-dark">버튼</button>
                             </div>
                             <h3>100%(block)</h3>
                             <div>
                                 <button type="button" class="btn btn-flat btn-lg btn-primary btn-block">버튼</button>
                                 <button type="button" class="btn btn-flat btn-lg btn-light btn-block">버튼</button>
+                                <button type="button" class="btn btn-flat btn-lg btn-outline-light btn-block">버튼</button>
                                 <button type="button" class="btn btn-flat btn-lg btn-dark btn-block">버튼</button>
                             </div>
                             <h3>+ icons</h3>
@@ -319,13 +345,21 @@
                         <section>
                             <h2>Form</h2>
                             <div>
-                                <input type="text" class="form-control">
+                                <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-event="datepicker">
                                 <select name="" id="" class="form-control">
-                                    <option value="">10</option>
-                                    <option value="">20</option>
-                                    <option value="">30</option>
-                                    <option value="">40</option>
+                                    <option value="">일반 셀렉트</option>
+                                    <option value="">111</option>
+                                    <option value="">222</option>
+                                    <option value="">333</option>
                                 </select>
+
+                                <select name="" id="" class="custom-select-md">
+                                    <option value="">커스텀 셀렉트</option>
+                                    <option value="">111</option>
+                                    <option value="">222</option>
+                                    <option value="">333</option>
+                                </select>
+
                                 <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Search">
                                     <span class="input-group-append">
@@ -460,6 +494,8 @@
 
     <!-- jQuery -->
     <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
     <!-- Bootstrap 4 -->
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
