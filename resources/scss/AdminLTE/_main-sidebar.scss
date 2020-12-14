@@ -674,7 +674,7 @@
   &.nav-sidebar > .nav-item {
     .nav-treeview,
     > .nav-treeview {
-      background: $dark;
+      background: #10121c;
       border-bottom: 1px solid $primary;
     }
   }
@@ -975,8 +975,13 @@
 
 .sidebar-dark-primary .nav-sidebar > .nav-item > .nav-link.active,
 .sidebar-light-primary .nav-sidebar > .nav-item > .nav-link.active{
-  background: $dark;
+  background: #10121c;
   .nav-icon{color:$primary;}
+  > p{color: #3a7afe;font-weight: 500;}
+}
+.sidebar-dark-primary .nav-sidebar > .nav-item:not(.menu-open) > .nav-link.active,
+.sidebar-light-primary .nav-sidebar > .nav-item:not(.menu-open) > .nav-link.active{
+  background: transparent;
 }
 
 [data-widget="pushmenu"]{

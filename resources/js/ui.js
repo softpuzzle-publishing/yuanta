@@ -1,7 +1,51 @@
+var Init = {
+	defaults : function(){
+		var bodyHeight = 0;
+		var bodyWidth = 0;
+		var breakpoint;
+		this.resize();
+		window.addEventListener("resize", this.resize);
+	},
+	resize : function(){
+		Init.getBrowserSize();
+		Init.drawBreakPoint();
+
+		Init.breakpoint = window.matchMedia('(min-width:992px)').matches;
+		if(!Init.breakpoint){
+			$('html').removeClass('is-desktop');
+			$('html').addClass('is-mobile');
+		}else{
+			$('html').removeClass('is-mobile');
+			$('html').addClass('is-desktop');
+		}
+	},
+	getBrowserSize : function(){
+		this.bodyHeight = Math.max(
+			document.body.scrollHeight,
+			document.body.offsetHeight,
+			document.documentElement.clientHeight,
+			document.documentElement.scrollHeight,
+			document.documentElement.offsetHeight
+		);
+		this.bodyWidth = Math.max(
+			document.body.scrollWidth,
+			document.body.offsetWidth,
+			document.documentElement.clientWidth,
+			document.documentElement.scrollWidth,
+			document.documentElement.offsetWidth
+		);
+	},
+	drawBreakPoint : function(){
+		$('html').attr('data-width',this.bodyWidth);
+		$('html').attr('data-height',this.bodyHeight);
+	},
+};
+
 var Common = {
 	init : function(){
 		Common.scrolling();
 		Common.top();
+		Common.sidebar();
 		Common.event();
 		window.addEventListener('mousewheel', Common.scrolling);
 		window.addEventListener('touchmove', Common.scrolling);
@@ -9,6 +53,19 @@ var Common = {
 		$(window).scroll(function(){
 			Common.scrolling();
 		});
+	},
+	resize : function(){
+		Init.getBrowserSize();
+		Init.drawBreakPoint();
+
+		Init.breakpoint = window.matchMedia('(min-width:992px)').matches;
+		if(!Init.breakpoint){
+			$('html').removeClass('is-desktop');
+			$('html').addClass('is-mobile');
+		}else{
+			$('html').removeClass('is-mobile');
+			$('html').addClass('is-desktop');
+		}
 	},
 	scrolling : function(e){
 		var scrollTop = $(window).scrollTop();
@@ -31,6 +88,21 @@ var Common = {
             $('html, body').animate({scrollTop: 0}, 300);
         });
 	},
+	sidebar : function(){
+		//mobile sidebar
+		$('.sidebar .nav > .nav-item > .nav-link').on('click',function(e){
+			if($('html').hasClass('is-mobile')){
+				if($(this).parent().hasClass('menu-open')){
+					e.preventDefault();
+					return false;
+				}
+			}
+		});
+		$('.sidebar-close').on('click',function(e){
+			e.preventDefault();
+			$('[data-widget="pushmenu"]').click();
+		});
+	},
 	event : function(){
 		//datepicker
 		$('[data-event="datepicker"]').datepicker({
@@ -42,8 +114,9 @@ var Common = {
 		//select
         $(".custom-select-md").each(function(){
             $(this).selectmenu().selectmenu("menuWidget").addClass("overflow select-sm");
-        });
-	}
+		});
+	},
 };
 
+Init.defaults();
 Common.init();

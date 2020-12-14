@@ -150,12 +150,12 @@
     @include gradient-bg($dropdown-link-hover-bg);
   }
 
-  &.active,
+/*   &.active,
   &:active {
     color: $dropdown-link-active-color;
     text-decoration: none;
     @include gradient-bg($dropdown-link-active-bg);
-  }
+  } */
 
   &.disabled,
   &:disabled {

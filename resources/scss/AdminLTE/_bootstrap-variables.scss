@@ -409,7 +409,7 @@ $input-border-radius-lg:                0 !default;
 $input-border-radius-sm:                0 !default;
 
 $input-focus-bg:                        $input-bg !default;
-$input-focus-border-color:              lighten($component-active-bg, 25%) !default;
+$input-focus-border-color:              lighten($component-active-bg, 10%) !default;
 $input-focus-color:                     $input-color !default;
 $input-focus-width:                     0 !default;
 $input-focus-box-shadow:                none !default;
@@ -539,7 +539,7 @@ $form-feedback-invalid-color:       theme-color("danger") !default;
 //
 // Dropdown menu container and contents.
 
-$dropdown-min-width:                10rem !default;
+$dropdown-min-width:                11rem !default;
 $dropdown-padding-y:                .5rem !default;
 $dropdown-spacer:                   .125rem !default;
 $dropdown-bg:                       $white !default;

@@ -1017,11 +1017,9 @@ input[type="submit"].btn-block, input[type="reset"].btn-block, input[type="butto
 
 .dropdown-divider { height: 0; margin: 0.5rem 0; overflow: hidden; border-top: 1px solid #e9ecef; }
 
-.dropdown-item { display: block; width: 100%; padding: 0.25rem 1.5rem; clear: both; font-weight: 400; color: #212529; text-align: inherit; white-space: nowrap; background-color: transparent; border: 0; }
+.dropdown-item { display: block; width: 100%; padding: 0.25rem 1.5rem; clear: both; font-weight: 400; color: #212529; text-align: inherit; white-space: nowrap; background-color: transparent; border: 0; /*   &.active, &:active { color: $dropdown-link-active-color; text-decoration: none; @include gradient-bg($dropdown-link-active-bg); } */ }
 
 .dropdown-item:hover, .dropdown-item:focus { color: #16181b; text-decoration: none; background-color: #f8f9fa; }
-
-.dropdown-item.active, .dropdown-item:active { color: #fff; text-decoration: none; background-color: #007bff; }
 
 .dropdown-item.disabled, .dropdown-item:disabled { color: #6c757d; pointer-events: none; background-color: transparent; }
 

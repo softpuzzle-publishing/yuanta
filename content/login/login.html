@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>유안타증권 운영관제</title>
+
+    <!-- Icon Fontawasome -->
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <!-- Icon Material -->
+    <link rel="stylesheet" href="../../resources/plugins/material-icons/material-icons.css">
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+    <!-- chartjs -->
+    <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
+    <!-- Bootstrap & Template style -->
+    <link rel="stylesheet" href="../../resources/css/AdminLte.css">
+    <!-- Yuanta style -->
+    <link rel="stylesheet" href="../../resources/css/yuanta.css">
+    <!-- Additional style -->
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+</head>
+
+<body class="body-login">
+    <!-- 실 컨텐츠 -->
+    <div class="login-wrap">
+        <div class="login-logo">
+            <div class="logo"><i class="icon-logo"><span class="sr-only">유안타증권</span></i></div>
+            <p>유안타증권 통합관제실에 오신것을 환영합니다.</p>
+        </div>
+        <div class="login-box">
+            <div class="login-form">
+                <div class="login-form-top">
+                    <h1>관리자 로그인</h1>
+                    <p>사용자 ID / Password 으로 로그인 합니다.</p>
+                </div>
+
+                <div class="login-form-content">
+                    <div class="form-group">
+                        <label for="fId">아이디</label>
+                        <input class="input-id form-control form-control-lg" type="email" id="fId">
+                    </div>
+                    <div class="form-group">
+                        <label for="fPw">비밀번호</label>
+                        <input class="input-pw form-control form-control-lg" type="password" id="fPw">
+                    </div>
+                    <!-- 에러 메세지 -->
+                    <div class="text-danger mb-4" style="display:none" id="msg-error">! 아이디 또는 비밀번호가 일치하지 않습니다</div>
+                </div>
+
+                <button type="button" class="login-btn btn btn-primary btn-lg btn-block mt-3" id="btn-login">로그인</button>
+
+                <div class="new-user">
+                    <p>* 신규사용자께서는 사용자 등록하시기 바랍니다.</p>
+                    <button type="button" class="login-btn btn btn-dark btn-lg btn-block">신규 사용자 등록</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //실 컨텐츠 -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart.js/Chart.min.js"></script>
+    <!-- ui -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#fId').focus();
+
+            $('#btn-login').on('click',function(e){
+                $('#msg-error').show();
+            });
+        });
+    </script>
+</body>
+
+</html>
