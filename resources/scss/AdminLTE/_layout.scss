@@ -487,7 +487,7 @@ body:not(.sidebar-mini-md) {
   color: #fff;
 
   > .content {
-    padding: $content-padding-y $content-padding-x;
+    padding: $content-padding-x $content-padding-x;
   }
 }
 
@@ -590,14 +590,14 @@ body:not(.sidebar-mini-md) {
 }
 
 .content-header {
-  padding: 15px $content-padding-x;
+  padding: $content-padding-x;
 
   .text-sm & {
     padding: 10px $content-padding-x;
   }
 
   h1 {
-    font-size: 1.8rem;
+    font-size: 1.25rem;
     margin: 0;
 
     .text-sm & {
@@ -617,7 +617,14 @@ body:not(.sidebar-mini-md) {
   }
 }
 
-
+@include media-breakpoint-down(md) {
+  .content-header {
+    padding: 1rem 1rem 0;
+    h1 {
+      font-size: 1.0625rem;
+    }
+  }
+}
 
 .hold-transition {
   .content-wrapper,

@@ -43,9 +43,11 @@ var Init = {
 
 var Common = {
 	init : function(){
+		Common.afterLoad();
 		Common.scrolling();
 		Common.top();
 		Common.sidebar();
+		Common.tab();
 		Common.event();
 		window.addEventListener('mousewheel', Common.scrolling);
 		window.addEventListener('touchmove', Common.scrolling);
@@ -53,6 +55,14 @@ var Common = {
 		$(window).scroll(function(){
 			Common.scrolling();
 		});
+	},
+	afterLoad : function(){
+		if($('body').hasClass('body-login')){
+			$('html').addClass('html-login');
+		}
+		if($('body').hasClass('body-popup')){
+			$('html').addClass('html-popup');
+		}
 	},
 	resize : function(){
 		Init.getBrowserSize();
@@ -102,6 +112,28 @@ var Common = {
 			e.preventDefault();
 			$('[data-widget="pushmenu"]').click();
 		});
+	},
+	tab : function(){
+		const breakpoint = window.matchMedia( '(min-width:1279px)' );
+
+		let tabSwiper;
+
+		const breakpointChecker = function() {
+			if ( breakpoint.matches === true ) {
+				if ( tabSwiper !== undefined ) tabSwiper.destroy( true, true );
+				return;
+			} else if ( breakpoint.matches === false ) {
+				return enableSwiper();
+			}
+		};
+		const enableSwiper = function() {
+			tabSwiper = new Swiper('.tab-swiper .swiper-container', {
+				slidesPerView: 'auto',
+				freeMode: true,
+			});
+		};
+		breakpoint.addListener(breakpointChecker);
+		breakpointChecker();
 	},
 	event : function(){
 		//datepicker

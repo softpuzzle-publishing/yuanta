@@ -129,7 +129,13 @@
 
 .table-dark {
   color: $table-dark-color;
-  background-color: $table-dark-bg;
+  //background-color: $table-dark-bg;
+  background: transparent;
+
+  thead th{
+    background: $light;
+    color: $dark;
+  }
 
   th,
   td,

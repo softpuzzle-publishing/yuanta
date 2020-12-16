@@ -7,6 +7,9 @@
 
     <title>유안타증권 운영관제 Guide</title>
 
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+
     <!-- Icon Fontawasome -->
     <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
     <!-- Icon Material -->
@@ -14,8 +17,12 @@
 
     <!-- Jquery UI -->
     <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+    <!-- jqgrid -->
+    <link rel="stylesheet" href="../../resources/plugins/jqgrid/css/ui.jqgrid.css">
     <!-- chartjs -->
     <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
     <!-- Bootstrap & Template style -->
     <link rel="stylesheet" href="../../resources/css/AdminLte.css">
     <!-- Yuanta style -->
@@ -24,14 +31,12 @@
     <link rel="stylesheet" href="../../resources/css/additional.css">
 
     <style>
-        h1{text-align: center;margin-bottom: 10px;}
-        #guide{overflow: hidden;background: #292c3c;}
+        #guide{overflow: hidden;}
         section{float: left;padding: 15px;width: 50%;}
-        h2{margin-bottom: 15px;font-size: 24px;}
-        h3{font-size: 18px;}
+        h2{margin-bottom: 15px;font-size: 24px !important;}
+        h3{font-size: 18px !important;}
         div + h3{margin-top: 1rem;}
         @media (max-width: 991.98px){
-            h1{font-size: 22px !important;}
             section{width: 100%;padding: 15px 10px;}
         }
     </style>
@@ -52,6 +57,11 @@
                 <li class="nav-item">
                     <a href="#" data-widget="pushmenu" role="button"><i class="material-icons">menu</i></a>
                 </li>
+                <li class="nav-item d-none d-xl-block">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item active">유안타증권 운영관제 리뉴얼 가이드</li>
+                      </ol>
+                </li>
             </ul>
 
             <!-- Right navbar links -->
@@ -70,7 +80,7 @@
                         <i class="material-icons">person</i>
                     </a>
                     <div class="dropdown-menu dropdown-menu-right">
-                        <div class="dropdown-item">
+                        <div class="dropdown-item d-lg-none">
                             <span class="role">
                                 <span class="role-admin">Admin</span>
                                 <!-- <span class="role-user">User</span>
@@ -250,241 +260,439 @@
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
             <!-- Content Header (Page header) -->
-            <div class="content-header">
+            <div class="content-header d-xl-none">
                 <h1>유안타증권 운영관제 리뉴얼 가이드</h1>
             </div>
             <!-- /.content-header -->
 
             <!-- Main content -->
             <div class="content">
-                <div class="container-fluid">
 
-                    <!-- 실 컨텐츠 -->
-                    <div id="guide">
-                        <section>
-                            <h2>버튼</h2>
-                            <h3>normal</h3>
-                            <div>
-                                <button type="button" class="btn btn-flat btn-primary">버튼</button>
-                                <button type="button" class="btn btn-flat btn-success">버튼</button>
-                                <button type="button" class="btn btn-flat btn-info">버튼</button>
-                                <button type="button" class="btn btn-flat btn-warning">버튼</button>
-                                <button type="button" class="btn btn-flat btn-danger">버튼</button>
-                                <button type="button" class="btn btn-flat btn-light">버튼</button>
-                                <button type="button" class="btn btn-flat btn-dark">버튼</button>
-                            </div>
-                            <div class="mt-1">
-                                <button type="button" class="btn btn-flat btn-outline-primary">버튼</button>
-                                <button type="button" class="btn btn-flat btn-outline-success">버튼</button>
-                                <button type="button" class="btn btn-flat btn-outline-info">버튼</button>
-                                <button type="button" class="btn btn-flat btn-outline-warning">버튼</button>
-                                <button type="button" class="btn btn-flat btn-outline-danger">버튼</button>
-                                <button type="button" class="btn btn-flat btn-outline-light">버튼</button>
-                                <button type="button" class="btn btn-flat btn-outline-dark">버튼</button>
-                            </div>
-                            <h3>large</h3>
-                            <div>
-                                <button type="button" class="btn btn-flat btn-lg btn-primary">버튼</button>
-                                <button type="button" class="btn btn-flat btn-lg btn-light">버튼</button>
-                                <button type="button" class="btn btn-flat btn-lg btn-outline-light">버튼</button>
-                                <button type="button" class="btn btn-flat btn-lg btn-dark">버튼</button>
-                            </div>
-                            <h3>small</h3>
-                            <div>
-                                <button type="button" class="btn btn-flat btn-sm btn-primary">버튼</button>
-                                <button type="button" class="btn btn-flat btn-sm btn-light">버튼</button>
-                                <button type="button" class="btn btn-flat btn-sm btn-outline-light">버튼</button>
-                                <button type="button" class="btn btn-flat btn-sm btn-dark">버튼</button>
-                            </div>
-                            <h3>100%(block)</h3>
-                            <div>
-                                <button type="button" class="btn btn-flat btn-lg btn-primary btn-block">버튼</button>
-                                <button type="button" class="btn btn-flat btn-lg btn-light btn-block">버튼</button>
-                                <button type="button" class="btn btn-flat btn-lg btn-outline-light btn-block">버튼</button>
-                                <button type="button" class="btn btn-flat btn-lg btn-dark btn-block">버튼</button>
-                            </div>
-                            <h3>+ icons</h3>
-                            <div>
-                                <button type="button" class="btn btn-flat btn-lg btn-dark">등록 <i class="fas fa-arrow-alt-circle-right"></i></button>
-                                <button type="button" class="btn btn-flat btn-lg btn-dark"><i class="fas fa-arrow-alt-circle-left"></i> 삭제</button>
-                            </div>
-                            <div>
-                                <button type="button" class="btn btn-flat btn-dark"><i class="material-icons">north</i> 위로</button>
-                                <button type="button" class="btn btn-flat btn-dark"><i class="material-icons">south</i> 아래로</button>
-                            </div>
-                        </section>
-                        <section>
-                            <h2>버튼 그룹</h2>
-                            <div>
-                                <div class="btn-group" role="group">
-                                    <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-left"></i></button>
-                                    <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-center"></i>
-                                    </button>
-                                    <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-right"></i>
-                                    </button>
-                                </div>
-                            </div>
-                        </section>
-                        <section>
-                            <h2>Icon</h2>
-                            <h3>직접 만든 class</h3>
-                            <div style="background: rgba(0,0,0,0.25);padding: 10px;">
-                                <i class="icon-logo"></i>
-                                <i class="icon-logo-sm"></i>
-                                <i class="icon-close"></i>
-                                <i class="icon-arrow-down"></i>
-                            </div>
-                            <h3>그밖에 폰트 아이콘</h3>
-                            <div>
-                                <div>
-                                    - <a href="https://fontawesome.com/icons" target="_blank">fontawesome</a>
-                                </div>
-                                <div>
-                                    - <a href="https://material.io/resources/icons/?style=baseline" target="_blank">Material Icon</a>
-                                </div>
-                            </div>
-                        </section>
-                        <section>
-                            <h2>Form</h2>
-                            <div>
-                                <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-event="datepicker">
-                                <select name="" id="" class="form-control">
-                                    <option value="">일반 셀렉트</option>
-                                    <option value="">111</option>
-                                    <option value="">222</option>
-                                    <option value="">333</option>
-                                </select>
-
-                                <select name="" id="" class="custom-select-md">
-                                    <option value="">커스텀 셀렉트</option>
-                                    <option value="">111</option>
-                                    <option value="">222</option>
-                                    <option value="">333</option>
-                                </select>
-
-                                <div class="input-group">
-                                    <input type="text" class="form-control" placeholder="Search">
-                                    <span class="input-group-append">
-                                        <button class="btn btn-primary"><i class="material-icons">search</i></button>
-                                    </span>
-                                </div>
-                                <div class="custom-file">
-                                    <input type="file" class="custom-file-input" id="exampleInputFile">
-                                    <label class="custom-file-label" for="exampleInputFile">Choose file</label>
-                                </div>
-                            </div>
-                            <div>
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
-                                    <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
-                                </div>
-
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio1" name="customRadio"
-                                        class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
-                                </div>
-
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheckDisabled1">
-                                    <label class="custom-control-label" for="customCheckDisabled1">Check this custom checkbox</label>
-                                </div>
-                            </div>
-                            <div class="bg-white">
-                                <div class="custom-control custom-switch">
-                                    <input type="checkbox" class="custom-control-input" id="customSwitch2">
-                                    <label class="custom-control-label" for="customSwitch2">Toggle this switch element</label>
-                                </div>
-
-                                <div class="custom-control custom-radio">
-                                    <input type="radio" id="customRadio2" name="customRadio"
-                                        class="custom-control-input">
-                                    <label class="custom-control-label" for="customRadio2">Toggle this custom radio</label>
-                                </div>
-
-                                <div class="custom-control custom-checkbox">
-                                    <input type="checkbox" class="custom-control-input" id="customCheckDisabled2">
-                                    <label class="custom-control-label" for="customCheckDisabled2">Check this custom checkbox</label>
-                                </div>
-                            </div>
-                        </section>
-                        <section>
-                            <h2>Text</h2>
-                            <div>
-                                <span class="text-primary">텍스트 컬러</span>
-                                <span class="text-secondary">텍스트 컬러</span>
-                                <span class="text-info">텍스트 컬러</span>
-                                <span class="text-success">텍스트 컬러</span>
-                                <span class="text-danger">텍스트 컬러</span>
-                                <span class="text-dark">텍스트 컬러</span>
-                                <span class="text-light">텍스트 컬러</span>
-                                <a href="#none" class="text-underline">텍스트 underline</a>
-                            </div>
-                        </section>
-                        <section>
-                            <h2>Align</h2>
-                            <div>
-                                <div class="text-left">텍스트 정렬</div>
-                                <div class="text-center">텍스트 정렬</div>
-                                <div class="text-right">텍스트 정렬</div>
-                            </div>
-                        </section>
-                        <section>
-                            <h2>Tab</h2>
-                            <div>
-                                <nav>
-                                    <ul class="nav nav-tabs" role="tablist">
-                                        <li class="nav-item">
-                                            <a class="nav-link active" data-toggle="pill" href="#t1" role="tab">Sales</a>
-                                        </li>
-                                        <li class="nav-item">
-                                            <a class="nav-link" data-toggle="pill" href="#t2" role="tab">Service</a>
-                                        </li>
-                                    </ul>
-                                </nav>
-                            </div>
-                        </section>
-                        <section>
-                            <h2>Card</h2>
-                            <div>
-                                <div class="card card-primary card-outline">
-                                    <div class="card-body">
-                                        카드 내용
+                <!-- 실 컨텐츠 -->
+                <div id="guide">
+                    <section style="width:100%">
+                        <h2>상태표시 박스</h2>
+                        <div>
+                            <div class="status">
+                                <div class="row">
+                                    <div class="col-4 col-lg-3 col-xl">
+                                        <div class="box bg-success">
+                                            <div>WAS(Process)</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-lg-3 col-xl">
+                                        <div class="box bg-info">
+                                            <div>WAS(Process)</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-lg-3 col-xl">
+                                        <div class="box bg-warning">
+                                            <div>WAS(Log)</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-lg-3 col-xl">
+                                        <div class="box bg-orange">
+                                            <div>TUXEDO(Process)</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-lg-3 col-xl">
+                                        <div class="box bg-danger">
+                                            <div>TUXEDO(Log)</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-lg-3 col-xl">
+                                        <div class="box bg-gray">
+                                            <div>TUXEDO(Log)</div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4 col-lg-3 col-xl">
+                                        <div class="box">
+                                            <div>TUXEDO(Log)</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </section>
-                        <section>
-                            <h2>Table</h2>
-                            <div>
-                                <table class="table table-bordered table-mobile-normal">
-                                    <caption>Driver Evaluation Table</caption>
-                                    <thead>
-                                        <tr>
-                                            <th class="text-center"></th>
-                                            <th class="text-center">Performance (Act/Pos)</th>
-                                            <th class="text-center">Driver Evaluation</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td class="text-center mobile-subject">First point of contact</td>
-                                            <td class="text-center" data-label="Performance (Act/Pos)">2/3</td>
-                                            <td class="text-center" data-label="Driver Evaluation">5</td>
-                                        </tr>
-                                        <tr>
-                                            <td class="text-center mobile-subject">First point of contact</td>
-                                            <td class="text-center" data-label="Performance (Act/Pos)">2/3</td>
-                                            <td class="text-center" data-label="Driver Evaluation">5</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                        </div>
+                    </section>
+                    <section style="width:100%">
+                        <h2>Tab</h2>
+                        <div>
+                            <nav class="tab-swiper">
+                                <div class="swiper-container">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <a href="#tab1" class="nav-link item active">tab 111111</a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#tab2" class="item">tab 2</a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#tab3" class="item">tab 3</a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#tab4" class="item">tab 44444</a>
+                                        </div>
+                                        <div class="swiper-slide">
+                                            <a href="#tab5" class="item">tab 555555</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </nav>
+                            <div class="tab-content">
+                                <div class="tab-pane show active" id="tab1">..1.</div>
+                                <div class="tab-pane" id="tab2">...2</div>
+                                <div class="tab-pane" id="tab3">...3</div>
+                                <div class="tab-pane" id="tab4">...4</div>
+                                <div class="tab-pane" id="tab5">...5</div>
                             </div>
-                        </section>
-                    </div>
-                    <!-- //실 컨텐츠 -->
+                        </div>
+                    </section>
+                    <section>
+                        <h2>팝업</h2>
+                        <div>
+                            <a href="popup.html" target="_blank" class="text-underline">window 팝업</a>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Divider</h2>
+                        <div>
+                            <div class="hr"></div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>버튼</h2>
+                        <h3>normal</h3>
+                        <div>
+                            <button type="button" class="btn btn-flat btn-primary">버튼</button>
+                            <button type="button" class="btn btn-flat btn-success">버튼</button>
+                            <button type="button" class="btn btn-flat btn-info">버튼</button>
+                            <button type="button" class="btn btn-flat btn-warning">버튼</button>
+                            <button type="button" class="btn btn-flat btn-danger">버튼</button>
+                            <button type="button" class="btn btn-flat btn-light">버튼</button>
+                            <button type="button" class="btn btn-flat btn-gray">버튼</button>
+                            <button type="button" class="btn btn-flat btn-dark">버튼</button>
+                        </div>
+                        <div class="mt-1">
+                            <button type="button" class="btn btn-flat btn-outline-primary">버튼</button>
+                            <button type="button" class="btn btn-flat btn-outline-success">버튼</button>
+                            <button type="button" class="btn btn-flat btn-outline-info">버튼</button>
+                            <button type="button" class="btn btn-flat btn-outline-warning">버튼</button>
+                            <button type="button" class="btn btn-flat btn-outline-danger">버튼</button>
+                            <button type="button" class="btn btn-flat btn-outline-light">버튼</button>
+                            <button type="button" class="btn btn-flat btn-outline-gray">버튼</button>
+                            <button type="button" class="btn btn-flat btn-outline-dark">버튼</button>
+                        </div>
+                        <h3>large</h3>
+                        <div>
+                            <button type="button" class="btn btn-flat btn-lg btn-primary">버튼</button>
+                            <button type="button" class="btn btn-flat btn-lg btn-light">버튼</button>
+                            <button type="button" class="btn btn-flat btn-lg btn-outline-light">버튼</button>
+                            <button type="button" class="btn btn-flat btn-lg btn-dark">버튼</button>
+                        </div>
+                        <h3>small</h3>
+                        <div>
+                            <button type="button" class="btn btn-flat btn-sm btn-primary">버튼</button>
+                            <button type="button" class="btn btn-flat btn-sm btn-light">버튼</button>
+                            <button type="button" class="btn btn-flat btn-sm btn-outline-light">버튼</button>
+                            <button type="button" class="btn btn-flat btn-sm btn-dark">버튼</button>
+                        </div>
+                        <h3>100%(block)</h3>
+                        <div>
+                            <button type="button" class="btn btn-flat btn-lg btn-primary btn-block">버튼</button>
+                            <button type="button" class="btn btn-flat btn-lg btn-light btn-block">버튼</button>
+                            <button type="button" class="btn btn-flat btn-lg btn-outline-light btn-block">버튼</button>
+                            <button type="button" class="btn btn-flat btn-lg btn-dark btn-block">버튼</button>
+                        </div>
+                        <h3>+ icons</h3>
+                        <div>
+                            <button type="button" class="btn btn-flat btn-lg btn-dark">등록 <i class="fas fa-arrow-alt-circle-right"></i></button>
+                            <button type="button" class="btn btn-flat btn-lg btn-dark"><i class="fas fa-arrow-alt-circle-left"></i> 삭제</button>
+                        </div>
+                        <div>
+                            <button type="button" class="btn btn-flat btn-dark"><i class="material-icons">north</i> 위로</button>
+                            <button type="button" class="btn btn-flat btn-dark"><i class="material-icons">south</i> 아래로</button>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>버튼 그룹</h2>
+                        <div>
+                            <div class="btn-group" role="group">
+                                <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-left"></i></button>
+                                <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-center"></i>
+                                </button>
+                                <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-right"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Icon</h2>
+                        <div>
+                            <div>
+                                - <a href="https://fontawesome.com/icons" target="_blank">fontawesome</a>
+                            </div>
+                            <div>
+                                - <a href="https://material.io/resources/icons/?style=baseline" target="_blank">Material Icon</a>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Form</h2>
+                        <div>
+                            <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-event="datepicker">
+                            <select name="" id="" class="form-control">
+                                <option value="">일반 셀렉트</option>
+                                <option value="">111</option>
+                                <option value="">222</option>
+                                <option value="">333</option>
+                            </select>
 
+                            <select name="" id="" class="custom-select-md">
+                                <option value="">커스텀 셀렉트</option>
+                                <option value="">111</option>
+                                <option value="">222</option>
+                                <option value="">333</option>
+                            </select>
+
+                            <div class="input-group">
+                                <input type="text" class="form-control" placeholder="Search">
+                                <span class="input-group-append">
+                                    <button class="btn btn-primary"><i class="material-icons">search</i></button>
+                                </span>
+                            </div>
+                            <div class="custom-file">
+                                <input type="file" class="custom-file-input" id="exampleInputFile">
+                                <label class="custom-file-label" for="exampleInputFile">Choose file</label>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                <label class="custom-control-label" for="customSwitch1">Toggle this switch element</label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio1" name="customRadio"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio1">Toggle this custom radio</label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheckDisabled1">
+                                <label class="custom-control-label" for="customCheckDisabled1">Check this custom checkbox</label>
+                            </div>
+
+                            <!-- 체크박스만 -->
+                            <div class="custom-control custom-checkbox has-no-label">
+                                <input type="checkbox" class="custom-control-input" id="chkNoLabel">
+                                <label class="custom-control-label" for="chkNoLabel"></label>
+                            </div>
+                        </div>
+                        <div class="bg-white">
+                            <div class="custom-control custom-switch">
+                                <input type="checkbox" class="custom-control-input" id="customSwitch2">
+                                <label class="custom-control-label" for="customSwitch2">Toggle this switch element</label>
+                            </div>
+
+                            <div class="custom-control custom-radio">
+                                <input type="radio" id="customRadio2" name="customRadio"
+                                    class="custom-control-input">
+                                <label class="custom-control-label" for="customRadio2">Toggle this custom radio</label>
+                            </div>
+
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="customCheckDisabled2">
+                                <label class="custom-control-label" for="customCheckDisabled2">Check this custom checkbox</label>
+                            </div>
+
+                            <!-- 체크박스만 -->
+                            <div class="custom-control custom-checkbox has-no-label">
+                                <input type="checkbox" class="custom-control-input" id="chkNoLabel2">
+                                <label class="custom-control-label" for="chkNoLabel2"></label>
+                            </div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Text</h2>
+                        <div>
+                            <span class="text-primary">텍스트 컬러</span>
+                            <span class="text-secondary">텍스트 컬러</span>
+                            <span class="text-info">텍스트 컬러</span>
+                            <span class="text-success">텍스트 컬러</span>
+                            <span class="text-danger">텍스트 컬러</span>
+                            <span class="text-dark">텍스트 컬러</span>
+                            <span class="text-light">텍스트 컬러</span>
+                            <a href="#none" class="text-underline">텍스트 underline</a>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Align</h2>
+                        <div>
+                            <div class="text-left">텍스트 정렬</div>
+                            <div class="text-center">텍스트 정렬</div>
+                            <div class="text-right">텍스트 정렬</div>
+                        </div>
+                    </section>
+                    <section>
+                        <h2>Card</h2>
+                        <div>
+                            <div class="card card-primary card-outline">
+                                <div class="card-body">
+                                    카드 내용
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <section style="width: 100%;">
+                        <h2>Table</h2>
+                        <h3>jqGrid</h3>
+                        <div class="row">
+                            <div class="col">
+                                <div class="table-dark">
+                                    <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_grdCode" dir="ltr" style="width: 371px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_grdCode"></div><div class="loading ui-state-default ui-state-active" id="load_grdCode" style="display: none;">조회중...</div><div class="ui-jqgrid-view" id="gview_grdCode" style="width: 371px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 371px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 353px;" role="grid" aria-labelledby="gbox_grdCode" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="grdCode_rn" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><div id="jqgh_grdCode_rn"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_keyid" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_keyid" class="ui-jqgrid-sortable"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcode" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcode" class="ui-jqgrid-sortable">코드<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcodename" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcodename" class="ui-jqgrid-sortable">코드명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gdesc" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gdesc" class="ui-jqgrid-sortable">코드설명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_use" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_use" class="ui-jqgrid-sortable">사용<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: 100px; width: 371px;"><div style="position:relative;"><div></div><table id="grdCode" style="width: 353px;" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_grdCode" class="ui-jqgrid-btable"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:25px;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 25px;"></td></tr><tr role="row" id="1" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;width: 25px;" title="1" aria-describedby="grdCode_rn">1</td><td role="gridcell" style="text-align:left;display:none;" title="167a3253-bc57-41d1-b048-3741d1cd337a" aria-describedby="grdCode_keyid">167a3253-bc57-41d1-b048-3741d1cd337a</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="2" tabindex="0" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary ui-state-highlight" aria-selected="true"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="2" aria-describedby="grdCode_rn">2</td><td role="gridcell" style="text-align:left;display:none;" title="257e3933-dba9-4870-a92e-300defdbeb91" aria-describedby="grdCode_keyid">257e3933-dba9-4870-a92e-300defdbeb91</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="3" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="3" aria-describedby="grdCode_rn">3</td><td role="gridcell" style="text-align:left;display:none;" title="9573cbab-b815-47ff-93be-34f4c8273a1a" aria-describedby="grdCode_keyid">9573cbab-b815-47ff-93be-34f4c8273a1a</td><td role="gridcell" style="text-align:center;" title="1111" aria-describedby="grdCode_gcode">1111</td><td role="gridcell" style="text-align:center;" title="11" aria-describedby="grdCode_gcodename">11</td><td role="gridcell" style="text-align:left;" title="11" aria-describedby="grdCode_gdesc">11</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="4" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="4" aria-describedby="grdCode_rn">4</td><td role="gridcell" style="text-align:left;display:none;" title="b5dc98d6-32af-453b-acb1-1d44bb93d8d2" aria-describedby="grdCode_keyid">b5dc98d6-32af-453b-acb1-1d44bb93d8d2</td><td role="gridcell" style="text-align:center;" title="3525" aria-describedby="grdCode_gcode">3525</td><td role="gridcell" style="text-align:center;" title="555" aria-describedby="grdCode_gcodename">555</td><td role="gridcell" style="text-align:left;" title="222" aria-describedby="grdCode_gdesc">222</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="5" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="5" aria-describedby="grdCode_rn">5</td><td role="gridcell" style="text-align:left;display:none;" title="2f9f3d58-450b-44ea-9150-4b0a7cb472de" aria-describedby="grdCode_keyid">2f9f3d58-450b-44ea-9150-4b0a7cb472de</td><td role="gridcell" style="text-align:center;" title="13253" aria-describedby="grdCode_gcode">13253</td><td role="gridcell" style="text-align:center;" title="146" aria-describedby="grdCode_gcodename">146</td><td role="gridcell" style="text-align:left;" title="1" aria-describedby="grdCode_gdesc">1</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="6" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="6" aria-describedby="grdCode_rn">6</td><td role="gridcell" style="text-align:left;display:none;" title="78d39912-20c9-498e-8b90-2420b8623a62" aria-describedby="grdCode_keyid">78d39912-20c9-498e-8b90-2420b8623a62</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcode">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcodename">ㅋㅋㅋ</td><td role="gridcell" style="text-align:left;" title="ㅋㅋㅋ" aria-describedby="grdCode_gdesc">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="7" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="7" aria-describedby="grdCode_rn">7</td><td role="gridcell" style="text-align:left;display:none;" title="9a9f461e-a246-4a43-a694-df73d2a8bd35" aria-describedby="grdCode_keyid">9a9f461e-a246-4a43-a694-df73d2a8bd35</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcode">테스트중임</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcodename">테스트중임</td><td role="gridcell" style="text-align:left;" title="테스트중임" aria-describedby="grdCode_gdesc">테스트중임</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="8" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="8" aria-describedby="grdCode_rn">8</td><td role="gridcell" style="text-align:left;display:none;" title="A12345" aria-describedby="grdCode_keyid">A12345</td><td role="gridcell" style="text-align:center;" title="UI_AUTH" aria-describedby="grdCode_gcode">UI_AUTH</td><td role="gridcell" style="text-align:center;" title="권한관리" aria-describedby="grdCode_gcodename">권한관리</td><td role="gridcell" style="text-align:left;" title="메뉴별 권한조정 화면" aria-describedby="grdCode_gdesc">메뉴별 권한조정 화면</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="9" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="9" aria-describedby="grdCode_rn">9</td><td role="gridcell" style="text-align:left;display:none;" title="eqweqwe" aria-describedby="grdCode_keyid">eqweqwe</td><td role="gridcell" style="text-align:center;" title="BBS_TYPE" aria-describedby="grdCode_gcode">BBS_TYPE</td><td role="gridcell" style="text-align:center;" title="게시판 종류" aria-describedby="grdCode_gcodename">게시판 종류</td><td role="gridcell" style="text-align:left;" title="게시판종류" aria-describedby="grdCode_gdesc">게시판종류</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="10" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="10" aria-describedby="grdCode_rn">10</td><td role="gridcell" style="text-align:left;display:none;" title="adf12r4" aria-describedby="grdCode_keyid">adf12r4</td><td role="gridcell" style="text-align:center;" title="DAILY_SEC_STAT" aria-describedby="grdCode_gcode">DAILY_SEC_STAT</td><td role="gridcell" style="text-align:center;" title="일일보안상태" aria-describedby="grdCode_gcodename">일일보안상태</td><td role="gridcell" style="text-align:left;" title="일일보안현황보고 보안상태코드" aria-describedby="grdCode_gdesc">일일보안현황보고 보안상태코드</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mgrdCode">&nbsp;</div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="table-light">
+                                    <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_grdCode" dir="ltr" style="width: 371px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_grdCode"></div><div class="loading ui-state-default ui-state-active" id="load_grdCode" style="display: none;">조회중...</div><div class="ui-jqgrid-view" id="gview_grdCode" style="width: 371px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 371px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 353px;" role="grid" aria-labelledby="gbox_grdCode" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="grdCode_rn" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><div id="jqgh_grdCode_rn"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_keyid" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_keyid" class="ui-jqgrid-sortable"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcode" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcode" class="ui-jqgrid-sortable">코드<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcodename" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcodename" class="ui-jqgrid-sortable">코드명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gdesc" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gdesc" class="ui-jqgrid-sortable">코드설명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_use" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_use" class="ui-jqgrid-sortable">사용<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: 100px; width: 371px;"><div style="position:relative;"><div></div><table id="grdCode" style="width: 353px;" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_grdCode" class="ui-jqgrid-btable"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:25px;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 25px;"></td></tr><tr role="row" id="1" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;width: 25px;" title="1" aria-describedby="grdCode_rn">1</td><td role="gridcell" style="text-align:left;display:none;" title="167a3253-bc57-41d1-b048-3741d1cd337a" aria-describedby="grdCode_keyid">167a3253-bc57-41d1-b048-3741d1cd337a</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="2" tabindex="0" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary ui-state-highlight" aria-selected="true"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="2" aria-describedby="grdCode_rn">2</td><td role="gridcell" style="text-align:left;display:none;" title="257e3933-dba9-4870-a92e-300defdbeb91" aria-describedby="grdCode_keyid">257e3933-dba9-4870-a92e-300defdbeb91</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="3" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="3" aria-describedby="grdCode_rn">3</td><td role="gridcell" style="text-align:left;display:none;" title="9573cbab-b815-47ff-93be-34f4c8273a1a" aria-describedby="grdCode_keyid">9573cbab-b815-47ff-93be-34f4c8273a1a</td><td role="gridcell" style="text-align:center;" title="1111" aria-describedby="grdCode_gcode">1111</td><td role="gridcell" style="text-align:center;" title="11" aria-describedby="grdCode_gcodename">11</td><td role="gridcell" style="text-align:left;" title="11" aria-describedby="grdCode_gdesc">11</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="4" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="4" aria-describedby="grdCode_rn">4</td><td role="gridcell" style="text-align:left;display:none;" title="b5dc98d6-32af-453b-acb1-1d44bb93d8d2" aria-describedby="grdCode_keyid">b5dc98d6-32af-453b-acb1-1d44bb93d8d2</td><td role="gridcell" style="text-align:center;" title="3525" aria-describedby="grdCode_gcode">3525</td><td role="gridcell" style="text-align:center;" title="555" aria-describedby="grdCode_gcodename">555</td><td role="gridcell" style="text-align:left;" title="222" aria-describedby="grdCode_gdesc">222</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="5" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="5" aria-describedby="grdCode_rn">5</td><td role="gridcell" style="text-align:left;display:none;" title="2f9f3d58-450b-44ea-9150-4b0a7cb472de" aria-describedby="grdCode_keyid">2f9f3d58-450b-44ea-9150-4b0a7cb472de</td><td role="gridcell" style="text-align:center;" title="13253" aria-describedby="grdCode_gcode">13253</td><td role="gridcell" style="text-align:center;" title="146" aria-describedby="grdCode_gcodename">146</td><td role="gridcell" style="text-align:left;" title="1" aria-describedby="grdCode_gdesc">1</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="6" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="6" aria-describedby="grdCode_rn">6</td><td role="gridcell" style="text-align:left;display:none;" title="78d39912-20c9-498e-8b90-2420b8623a62" aria-describedby="grdCode_keyid">78d39912-20c9-498e-8b90-2420b8623a62</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcode">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcodename">ㅋㅋㅋ</td><td role="gridcell" style="text-align:left;" title="ㅋㅋㅋ" aria-describedby="grdCode_gdesc">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="7" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="7" aria-describedby="grdCode_rn">7</td><td role="gridcell" style="text-align:left;display:none;" title="9a9f461e-a246-4a43-a694-df73d2a8bd35" aria-describedby="grdCode_keyid">9a9f461e-a246-4a43-a694-df73d2a8bd35</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcode">테스트중임</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcodename">테스트중임</td><td role="gridcell" style="text-align:left;" title="테스트중임" aria-describedby="grdCode_gdesc">테스트중임</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="8" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="8" aria-describedby="grdCode_rn">8</td><td role="gridcell" style="text-align:left;display:none;" title="A12345" aria-describedby="grdCode_keyid">A12345</td><td role="gridcell" style="text-align:center;" title="UI_AUTH" aria-describedby="grdCode_gcode">UI_AUTH</td><td role="gridcell" style="text-align:center;" title="권한관리" aria-describedby="grdCode_gcodename">권한관리</td><td role="gridcell" style="text-align:left;" title="메뉴별 권한조정 화면" aria-describedby="grdCode_gdesc">메뉴별 권한조정 화면</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="9" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="9" aria-describedby="grdCode_rn">9</td><td role="gridcell" style="text-align:left;display:none;" title="eqweqwe" aria-describedby="grdCode_keyid">eqweqwe</td><td role="gridcell" style="text-align:center;" title="BBS_TYPE" aria-describedby="grdCode_gcode">BBS_TYPE</td><td role="gridcell" style="text-align:center;" title="게시판 종류" aria-describedby="grdCode_gcodename">게시판 종류</td><td role="gridcell" style="text-align:left;" title="게시판종류" aria-describedby="grdCode_gdesc">게시판종류</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="10" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="10" aria-describedby="grdCode_rn">10</td><td role="gridcell" style="text-align:left;display:none;" title="adf12r4" aria-describedby="grdCode_keyid">adf12r4</td><td role="gridcell" style="text-align:center;" title="DAILY_SEC_STAT" aria-describedby="grdCode_gcode">DAILY_SEC_STAT</td><td role="gridcell" style="text-align:center;" title="일일보안상태" aria-describedby="grdCode_gcodename">일일보안상태</td><td role="gridcell" style="text-align:left;" title="일일보안현황보고 보안상태코드" aria-describedby="grdCode_gdesc">일일보안현황보고 보안상태코드</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mgrdCode">&nbsp;</div></div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>일반 table</h3>
+                        <div>
+                            <div class="row">
+                                <div class="col">
+                                    <table class="table table-dark table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center"></th>
+                                                <th class="text-center">관제코드</th>
+                                                <th class="text-center">관제명</th>
+                                                <th class="text-center">임계값</th>
+                                                <th class="text-center">생성자</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk1">
+                                                        <label class="custom-control-label" for="chk1"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk2">
+                                                        <label class="custom-control-label" for="chk2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk3">
+                                                        <label class="custom-control-label" for="chk3"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk4">
+                                                        <label class="custom-control-label" for="chk4"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col">
+                                    <table class="table table-light table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center"></th>
+                                                <th class="text-center">관제코드</th>
+                                                <th class="text-center">관제명</th>
+                                                <th class="text-center">임계값</th>
+                                                <th class="text-center">생성자</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk1">
+                                                        <label class="custom-control-label" for="chk1"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk2">
+                                                        <label class="custom-control-label" for="chk2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk3">
+                                                        <label class="custom-control-label" for="chk3"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk4">
+                                                        <label class="custom-control-label" for="chk4"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
                 </div>
+                <!-- //실 컨텐츠 -->
+
             </div>
             <!-- /.content -->
         </div>
@@ -502,12 +710,28 @@
     <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
     <!-- AdminLTE App -->
     <script src="../../resources/js/adminlte.min.js"></script>
+    <!-- jqgrid -->
+    <script src="../../resources/plugins/jqgrid/js/jquery.jqGrid.min.js"></script>
     <!-- chartjs -->
     <script src="../../resources/plugins/chart.js/Chart.min.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
     <!-- ui -->
     <script src="../../resources/js/ui.js"></script>
 
     <script>
+        $(document).ready(function(){
+            $('.tab-swiper .item').on('click',function(e){
+                e.preventDefault();
+                var target = $(this).attr('href');
+
+                $(this).parent().siblings().find('.item').removeClass('active');
+                $(this).addClass('active');
+
+                $(target).siblings('.tab-pane').removeClass('active').removeClass('show');
+                $(target).addClass('show').addClass('active');
+            });
+        });
     </script>
 </body>
 

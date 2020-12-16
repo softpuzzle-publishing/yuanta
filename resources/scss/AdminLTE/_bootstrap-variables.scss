@@ -40,10 +40,10 @@ $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
 $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
-$yellow:  #ffc107 !default;
-$green:   #28a745 !default;
+$yellow:  #e6b239 !default;
+$green:   #56c488 !default;
 $teal:    #20c997 !default;
-$cyan:    #17a2b8 !default;
+$cyan:    #89adf5 !default;
 
 $colors: () !default;
 $colors: map-merge((
@@ -69,6 +69,7 @@ $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
+$gray:          #999bac !default;
 $dark:          #1d1f2d !default;
 
 $theme-colors: () !default;
@@ -80,6 +81,7 @@ $theme-colors: map-merge((
         "warning":    $warning,
         "danger":     $danger,
         "light":      $light,
+        "gray":       $gray,
         "dark":       $dark
 ), $theme-colors);
 // stylelint-enable
@@ -235,8 +237,8 @@ $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberati
 $font-family-base:            $font-family-sans-serif !default;
 // stylelint-enable value-keyword-case
 
-$font-size-base:              1rem !default; // Assumes the browser default, typically `16px`
-$font-size-lg:                ($font-size-base * 1.25) !default;
+$font-size-base:              0.875rem !default; // Assumes the browser default, typically `16px`
+$font-size-lg:                ($font-size-base * 1.1) !default;
 $font-size-sm:                ($font-size-base * .875) !default;
 
 $font-weight-light:           300 !default;
@@ -301,12 +303,12 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          .75rem !default;
-$table-cell-padding-sm:       .3rem !default;
+$table-cell-padding:          5px !default;
+$table-cell-padding-sm:       .25rem !default;
 
 $table-bg:                    transparent !default;
-$table-accent-bg:             rgba($black, .05) !default;
-$table-hover-bg:              rgba($black, .075) !default;
+$table-accent-bg:             rgba($black, .1) !default;
+$table-hover-bg:              rgba($black, .15) !default;
 $table-active-bg:             $table-hover-bg !default;
 
 $table-border-width:          $border-width !default;
@@ -316,8 +318,8 @@ $table-head-bg:               $gray-200 !default;
 $table-head-color:            $gray-700 !default;
 
 $table-dark-bg:               $gray-900 !default;
-$table-dark-accent-bg:        rgba($white, .05) !default;
-$table-dark-hover-bg:         rgba($white, .075) !default;
+$table-dark-accent-bg:        rgba($white, .1) !default;
+$table-dark-hover-bg:         rgba($white, .15) !default;
 $table-dark-border-color:     lighten($gray-900, 10%) !default;
 $table-dark-color:            $body-bg !default;
 

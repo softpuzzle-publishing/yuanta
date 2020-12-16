@@ -10,7 +10,7 @@
   padding: $brand-link-padding-y $sidebar-padding-x;
   transition: width $transition-speed $transition-fn;
   white-space: nowrap;
-  height: 83px;
+  height: 65px;
   background: $dark;
 
   .in{height: 100%;display: flex;align-items: center;}
@@ -37,9 +37,9 @@
   .brand-image {
     float: left;
     line-height: .8;
-    margin-left: .8rem;
+    margin-left: 15px;
     margin-right: 1rem;
-    max-height: 33px;
+    max-height: 28px;
     width: auto;
   }
 
@@ -86,6 +86,6 @@
   display: inline-block;
   vertical-align: top;
   img{
-    max-height: 33px;
+    max-height: 22px;
   }
 }

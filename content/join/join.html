@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>유안타증권 운영관제</title>
+
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+
+    <!-- Icon Fontawasome -->
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <!-- Icon Material -->
+    <link rel="stylesheet" href="../../resources/plugins/material-icons/material-icons.css">
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+    <!-- jqgrid -->
+    <link rel="stylesheet" href="../../resources/plugins/jqgrid/css/ui.jqgrid.css">
+    <!-- chartjs -->
+    <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
+    <!-- Bootstrap & Template style -->
+    <link rel="stylesheet" href="../../resources/css/AdminLte.css">
+    <!-- Yuanta style -->
+    <link rel="stylesheet" href="../../resources/css/yuanta.css">
+    <!-- Additional style -->
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+</head>
+
+<body class="body-login">
+    <!-- 실 컨텐츠 -->
+    <div class="login-wrap">
+        <div class="login-logo">
+            <div class="logo"><i class="icon-logo"><span class="sr-only">유안타증권</span></i></div>
+            <p>유안타증권 통합관제실에 오신것을 환영합니다.</p>
+        </div>
+        <div class="login-box">
+            <div class="login-form">
+                <div class="login-form-content">
+                    <div class="row">
+                        <div class="col-12 col-lg">
+                            <div class="form-group">
+                                <label for="fId">신청사용자 ID</label>
+                                <input type="text" class="form-control" id="fId">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <div class="form-group">
+                                <label for="fIdNum">사번입력</label>
+                                <input type="text" class="form-control" id="fIdNum">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg">
+                            <div class="form-group">
+                                <label for="fName">사용자명</label>
+                                <input type="text" class="form-control" id="fName">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <div class="form-group">
+                                <label for="fGroup">조직명</label>
+                                <select name="" class="form-control" id="fGroup" >
+                                    <option value="">등급코드</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-12 col-lg">
+                            <div class="form-group">
+                                <label for="fEmail">Email</label>
+                                <input type="email" class="form-control" id="fEmail">
+                            </div>
+                        </div>
+                        <div class="col-12 col-lg">
+                            <div class="form-group">
+                                <label for="fMobile">핸드폰번호</label>
+                                <input type="tel" class="form-control" id="fMobile">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="fAuthority">권한등급</label>
+                        <select name="" class="form-control" id="fAuthority" >
+                            <option value="">등급코드</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fPw">비밀번호</label>
+                        <input type="password" class="input-pw form-control" id="fPw">
+                        <p class="form-text">* 특수문자,숫자,문자code 포함 8~20자리</p>
+                    </div>
+
+                    <!-- 에러 메세지 -->
+                    <div class="text-danger mb-4" style="display:none" id="msg-error">! 에러메세지 출력</div>
+                </div>
+
+                <button type="button" class="btn btn-primary btn-lg btn-block mt-3" id="btn-join">신청</button>
+
+                <div class="text-right mt-3">
+                    <a href="../login/login.html" class="text-underline">로그인 창으로</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //실 컨텐츠 -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.min.js"></script>
+    <!-- jqgrid -->
+    <script src="../../resources/plugins/jqgrid/js/jquery.jqGrid.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart.js/Chart.min.js"></script>
+    <!-- ui -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn-join').on('click',function(e){
+                $('#msg-error').show();
+            });
+        });
+    </script>
+</body>
+
+</html>
