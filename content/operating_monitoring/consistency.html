@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>유안타증권 운영관제 Guide</title>
+
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+
+    <!-- Icon Fontawasome -->
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <!-- Icon Material -->
+    <link rel="stylesheet" href="../../resources/plugins/material-icons/material-icons.css">
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+    <!-- jqgrid -->
+    <link rel="stylesheet" href="../../resources/plugins/jqgrid/css/ui.jqgrid.css">
+    <!-- chartjs -->
+    <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
+    <!-- Bootstrap & Template style -->
+    <link rel="stylesheet" href="../../resources/css/AdminLte.css">
+    <!-- Yuanta style -->
+    <link rel="stylesheet" href="../../resources/css/yuanta.css">
+    <!-- Additional style -->
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+</head>
+
+<body class="sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-dark navbar-navy">
+            <!-- Mobile logo -->
+            <a href="../dashboard/dashboard.html" class="brand-logo-mobile d-lg-none">
+                <i class="icon-logo"><span class="sr-only">유안타증권</span></i>
+            </a>
+
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" data-widget="pushmenu" role="button"><i class="material-icons">menu</i></a>
+                </li>
+                <li class="nav-item d-none d-xl-block">
+                    <ol class="breadcrumb">
+                        <li class="breadcrumb-item">운영모니터링</li>
+                        <li class="breadcrumb-item active">데이터정합성</li>
+                    </ol>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown nav-my">
+                    <a class="nav-link d-none d-lg-inline-block" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <span class="role">
+                            <span class="role-admin">Admin</span>
+                            <!-- <span class="role-user">User</span>
+                            <span class="role-op">OP</span>
+                            <span class="role-monitoring">Monitoring</span> -->
+                        </span>
+                        <span class="name">홍길동</span>
+                    </a>
+                    <a class="nav-link d-lg-none" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="material-icons">person</i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-item d-lg-none">
+                            <span class="role">
+                                <span class="role-admin">Admin</span>
+                                <!-- <span class="role-user">User</span>
+                                <span class="role-op">OP</span>
+                                <span class="role-monitoring">Monitoring</span> -->
+                            </span>
+                            <span class="name">홍길동</span>
+                        </div>
+                        <a href="#" class="dropdown-item"><i class="material-icons">assignment</i> 관제게시판</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"><i class="material-icons">person</i> 프로필 수정</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"><i class="material-icons">history</i> 접속 히스토리</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../login/login.html" class="dropdown-item"><i class="material-icons">exit_to_app</i> 로그아웃</a>
+                    </div>
+                </li>
+                <li class="nav-item nav-access d-none d-lg-block">
+                    <div class="access-info">최근접속정보 : 2020.11.24  오후 05:12:12</div>
+                </li>
+                <li class="nav-item dropdown nav-noti">
+                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="material-icons">notifications</i>
+                        <span class="badge badge-danger navbar-badge"></span>
+                        <span class="circle"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                        <a href="#" class="dropdown-item">
+                            <span class="text">[공지] 알려드립니다. 금융정보에 경고알람이 생겼습니다.</span>
+                            <span class="text-sm">20-10-10 13:43:32</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <span class="text">[공지] 알려드립니다. 금융정보에 경고알람이 생겼습니다.</span>
+                            <span class="text-sm">20-10-10 13:43:32</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <span class="text">[공지] 알려드립니다. 금융정보에 경고알람이 생겼습니다.</span>
+                            <span class="text-sm">20-10-10 13:43:32</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="../dashboard/dashboard.html" class="brand-link d-none d-lg-block">
+                <span class="in">
+                    <img src="../../resources/images/ic-logo-bi.svg" alt="유안타증권 Logo" class="brand-image">
+                    <span class="brand-text font-weight-light"><img src="../../resources/images/ic-logo-text.svg" alt="유안타증권"></span>
+                </span>
+            </a>
+
+            <!-- Mobile logo & Close -->
+            <div class="sidebar-top-mobile d-lg-none">
+                <a href="../dashboard/dashboard.html" class="brand-logo-mobile d-lg-none">
+                    <i class="icon-logo"><span class="sr-only">유안타증권</span></i>
+                </a>
+                <a href="#" class="sidebar-close"><i class="material-icons">close</i></a>
+            </div>
+
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav>
+                    <ul class="nav nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="true">
+                        <li class="nav-item">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon material-icons">dashboard</i>
+                                <p>
+                                    대시보드
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview active menu-open">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon material-icons">leaderboard</i>
+                                <p>
+                                    운영모니터링
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon material-icons">search</i>
+                                <p>
+                                    분석
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>시스템 이상징후</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>타임아웃현황</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>반영목록 작동 조회</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Zenius</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>TMAX</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>FramePlus</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Control-M</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p></p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link active">
+                                        <p>시스템로그 통합조회</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon material-icons">record_voice_over</i>
+                                <p>
+                                    대응
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon material-icons">handyman</i>
+                                <p>
+                                    운영관리
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="" class="nav-link">
+                                <i class="nav-icon material-icons">settings</i>
+                                <p>
+                                    시스템관리
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Level 2</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+            <!-- Content Header (Page header) -->
+            <div class="content-header d-xl-none">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item">운영모니터링</li>
+                    <li class="breadcrumb-item active">데이터정합성</li>
+                </ol>
+            </div>
+            <!-- /.content-header -->
+
+            <!-- Main content -->
+            <div class="content">
+
+                <!-- 실 컨텐츠 -->
+                <div class="row row-30">
+                    <div class="col-12 col-lg-7">
+                        <div class="row align-items-center justify-content-between mb-2">
+                            <div class="col-auto">
+                                <h3 class="title">졍합성 마스트</h3>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btn-gray">추가</button>
+                                <button type="button" class="btn btn-gray ml-1">삭제</button>
+                            </div>
+                        </div>
+                        <div class="table-dark">
+                            <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_grdCode" dir="ltr"
+                                style="width: 100%;">
+                                <div class="ui-widget-overlay jqgrid-overlay" id="lui_grdCode"></div>
+                                <div class="loading ui-state-default ui-state-active" id="load_grdCode"
+                                    style="display: none;">조회중...</div>
+                                <div class="ui-jqgrid-view" id="gview_grdCode" style="width: 100%;">
+                                    <div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix"
+                                        style="display: none;"><a role="link" href="javascript:void(0)"
+                                            class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span
+                                                class="ui-icon ui-icon-circle-triangle-n"></span></a><span
+                                            class="ui-jqgrid-title"></span></div>
+                                    <div class="ui-state-default ui-jqgrid-hdiv" style="width: 100%;">
+                                        <div class="ui-jqgrid-hbox">
+                                            <table class="ui-jqgrid-htable" style="width: 775px;" role="grid"
+                                                aria-labelledby="gbox_grdCode" cellspacing="0" cellpadding="0"
+                                                border="0">
+                                                <thead>
+                                                    <tr class="ui-jqgrid-labels" role="rowheader">
+                                                        <th id="grdCode_rn" role="columnheader"
+                                                            class="ui-state-default ui-th-column ui-th-ltr"
+                                                            aria-selected="false" style="width: 25px;">
+                                                            <div id="jqgh_grdCode_rn"><span class="s-ico"
+                                                                    style="display:none"><span sort="asc"
+                                                                        class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span
+                                                                        sort="desc"
+                                                                        class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span>
+                                                            </div>
+                                                        </th>
+                                                        <th id="grdCode_keyid" role="columnheader"
+                                                            class="ui-state-default ui-th-column ui-th-ltr"
+                                                            style="width: 150px; display: none;"><span
+                                                                class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                                                style="cursor: col-resize;">&nbsp;</span>
+                                                            <div id="jqgh_grdCode_keyid" class="ui-jqgrid-sortable">
+                                                                <span class="s-ico" style="display:none"><span
+                                                                        sort="asc"
+                                                                        class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span
+                                                                        sort="desc"
+                                                                        class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span>
+                                                            </div>
+                                                        </th>
+                                                        <th id="grdCode_gcode" role="columnheader"
+                                                            class="ui-state-default ui-th-column ui-th-ltr"
+                                                            style="width: 231px;"><span
+                                                                class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                                                style="cursor: col-resize;">&nbsp;</span>
+                                                            <div id="jqgh_grdCode_gcode" class="ui-jqgrid-sortable">
+                                                                코드<span class="s-ico" style="display:none"><span
+                                                                        sort="asc"
+                                                                        class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span
+                                                                        sort="desc"
+                                                                        class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span>
+                                                            </div>
+                                                        </th>
+                                                        <th id="grdCode_gcodename" role="columnheader"
+                                                            class="ui-state-default ui-th-column ui-th-ltr"
+                                                            style="width: 231px;"><span
+                                                                class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                                                style="cursor: col-resize;">&nbsp;</span>
+                                                            <div id="jqgh_grdCode_gcodename" class="ui-jqgrid-sortable">
+                                                                코드명<span class="s-ico" style="display:none"><span
+                                                                        sort="asc"
+                                                                        class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span
+                                                                        sort="desc"
+                                                                        class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span>
+                                                            </div>
+                                                        </th>
+                                                        <th id="grdCode_gdesc" role="columnheader"
+                                                            class="ui-state-default ui-th-column ui-th-ltr"
+                                                            aria-selected="true" style="width: 231px;"><span
+                                                                class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                                                style="cursor: col-resize;">&nbsp;</span>
+                                                            <div id="jqgh_grdCode_gdesc" class="ui-jqgrid-sortable">
+                                                                코드설명<span class="s-ico" style=""><span sort="asc"
+                                                                        class="ui-grid-ico-sort ui-icon-asc ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span
+                                                                        sort="desc"
+                                                                        class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span>
+                                                            </div>
+                                                        </th>
+                                                        <th id="grdCode_use" role="columnheader"
+                                                            class="ui-state-default ui-th-column ui-th-ltr"
+                                                            style="width: 57px;"><span
+                                                                class="ui-jqgrid-resize ui-jqgrid-resize-ltr"
+                                                                style="cursor: col-resize;">&nbsp;</span>
+                                                            <div id="jqgh_grdCode_use" class="ui-jqgrid-sortable">
+                                                                사용<span class="s-ico" style="display:none"><span
+                                                                        sort="asc"
+                                                                        class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span
+                                                                        sort="desc"
+                                                                        class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span>
+                                                            </div>
+                                                        </th>
+                                                    </tr>
+                                                </thead>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <div class="ui-jqgrid-bdiv" style="height: 539px; width: 100%;">
+                                        <div style="position:relative;">
+                                            <div></div>
+                                            <table id="grdCode" style="width: 100%;" tabindex="0" cellspacing="0"
+                                                cellpadding="0" border="0" role="grid" aria-multiselectable="false"
+                                                aria-labelledby="gbox_grdCode" class="ui-jqgrid-btable">
+                                                <tbody>
+                                                    <tr class="jqgfirstrow" role="row" style="height:auto">
+                                                        <td role="gridcell" style="height:0px;width:25px;"></td>
+                                                        <td role="gridcell"
+                                                            style="height:0px;width:150px;display:none;"></td>
+                                                        <td role="gridcell" style="height: 0px; width: 231px;"></td>
+                                                        <td role="gridcell" style="height: 0px; width: 231px;"></td>
+                                                        <td role="gridcell" style="height: 0px; width: 231px;"></td>
+                                                        <td role="gridcell" style="height: 0px; width: 57px;"></td>
+                                                    </tr>
+                                                    <tr role="row" id="17" tabindex="-1"
+                                                        class="ui-widget-content jqgrow ui-row-ltr">
+                                                        <td role="gridcell" class="ui-state-default jqgrid-rownum"
+                                                            style="text-align:center;width: 25px;" title="1"
+                                                            aria-describedby="grdCode_rn">1</td>
+                                                        <td role="gridcell" style="text-align:left;display:none;"
+                                                            title="2f9f3d58-450b-44ea-9150-4b0a7cb472de"
+                                                            aria-describedby="grdCode_keyid">
+                                                            2f9f3d58-450b-44ea-9150-4b0a7cb472de</td>
+                                                        <td role="gridcell" style="text-align:center;" title="13253"
+                                                            aria-describedby="grdCode_gcode">13253</td>
+                                                        <td role="gridcell" style="text-align:center;" title="146"
+                                                            aria-describedby="grdCode_gcodename">146</td>
+                                                        <td role="gridcell" style="text-align:left;" title="1"
+                                                            aria-describedby="grdCode_gdesc">1</td>
+                                                        <td role="gridcell" style="text-align:center;" title="Y"
+                                                            aria-describedby="grdCode_use">Y</td>
+                                                    </tr>
+                                                    <tr role="row" id="15" tabindex="-1"
+                                                        class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary">
+                                                        <td role="gridcell" class="ui-state-default jqgrid-rownum"
+                                                            style="text-align:center;" title="2"
+                                                            aria-describedby="grdCode_rn">2</td>
+                                                        <td role="gridcell" style="text-align:left;display:none;"
+                                                            title="9573cbab-b815-47ff-93be-34f4c8273a1a"
+                                                            aria-describedby="grdCode_keyid">
+                                                            9573cbab-b815-47ff-93be-34f4c8273a1a</td>
+                                                        <td role="gridcell" style="text-align:center;" title="1111"
+                                                            aria-describedby="grdCode_gcode">1111</td>
+                                                        <td role="gridcell" style="text-align:center;" title="11"
+                                                            aria-describedby="grdCode_gcodename">11</td>
+                                                        <td role="gridcell" style="text-align:left;" title="11"
+                                                            aria-describedby="grdCode_gdesc">11</td>
+                                                        <td role="gridcell" style="text-align:center;" title="Y"
+                                                            aria-describedby="grdCode_use">Y</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ui-jqgrid-resize-mark" id="rs_mgrdCode">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-lg-5">
+                        <div class="row align-items-center justify-content-between mb-2">
+                            <div class="col-auto">
+                                <h3 class="title">세부정보</h3>
+                            </div>
+                            <div class="col-auto">
+                                <button type="button" class="btn btb-sm btn-primary">데이터</button>
+                            </div>
+                        </div>
+                        <div class="card card-navy">
+                            <div class="card-header">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <h4 class="card-title">Expression</h4>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-sm btn-gray">추가</button>
+                                        <button type="button" class="btn btn-sm btn-gray ml-1">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    jqgrid 영역
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card card-navy">
+                            <div class="card-header">
+                                <div class="row align-items-center justify-content-between">
+                                    <div class="col-auto">
+                                        <h4 class="card-title">Operand</h4>
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-sm btn-gray">추가</button>
+                                        <button type="button" class="btn btn-sm btn-gray ml-1">삭제</button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="card-body">
+                                <div>
+                                    jqgrid 영역
+                                </div>
+                                <p class="mt-3">* Operand = V1 + V2 + V3</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //실 컨텐츠 -->
+
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.min.js"></script>
+    <!-- jqgrid -->
+    <script src="../../resources/plugins/jqgrid/js/jquery.jqGrid.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart.js/Chart.min.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
+    <!-- ui -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        });
+    </script>
+</body>
+
+</html>

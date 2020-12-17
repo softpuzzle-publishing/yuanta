@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>유안타증권 운영관제</title>
+
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+
+    <!-- Icon Fontawasome -->
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <!-- Icon Material -->
+    <link rel="stylesheet" href="../../resources/plugins/material-icons/material-icons.css">
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+    <!-- jqgrid -->
+    <link rel="stylesheet" href="../../resources/plugins/jqgrid/css/ui.jqgrid.css">
+    <!-- chartjs -->
+    <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
+    <!-- Bootstrap & Template style -->
+    <link rel="stylesheet" href="../../resources/css/AdminLte.css">
+    <!-- Yuanta style -->
+    <link rel="stylesheet" href="../../resources/css/yuanta.css">
+    <!-- Additional style -->
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+</head>
+
+<body class="body-popup">
+    <!-- 실 컨텐츠 -->
+    <div class="popup-wrap">
+        <div class="popup-header">
+            <h1 class="popup-title">모니터링</h1>
+            <a href="#" class="popup-close" onclick="window.close()">
+                <i class="icon-close"><span class="sr-only">팝업 닫기</span></i>
+            </a>
+        </div>
+        <div class="popup-body">
+            <div class="row row-30">
+                <div class="col-12 col-lg-6">
+                    <div class="mb-3"><strong>관제명 : 자산정합성</strong></div>
+                    <div class="chart-canvas">
+                        <canvas id="canvas1"></canvas>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="mb-3"><strong>관제명 : 자산정합성</strong></div>
+                    <div class="chart-canvas">
+                        <canvas id="canvas2"></canvas>
+                    </div>
+                </div>
+            </div>
+            <div class="row row-30">
+                <div class="col-12 col-lg-6">
+                    <div class="mb-3"><strong>관제명 : ㅇㅇㅇ</strong></div>
+                    <div class="chart-canvas">
+                        <canvas id="canvas3"></canvas>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-6">
+                    <div class="mb-3"><strong>관제명 : ㅇㅇㅇ</strong></div>
+                    <div class="chart-canvas">
+                        <canvas id="canvas4"></canvas>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- //실 컨텐츠 -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.min.js"></script>
+    <!-- jqgrid -->
+    <script src="../../resources/plugins/jqgrid/js/jquery.jqGrid.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart.js/Chart.min.js"></script>
+    <!-- ui -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+
+        });
+
+        window.chartColors = {
+            red: 'rgb(255, 99, 132)',
+            orange: 'rgb(255, 159, 64)',
+            yellow: 'rgb(255, 205, 86)',
+            green: 'rgb(75, 192, 192)',
+            blue: 'rgb(54, 162, 235)',
+            purple: 'rgb(153, 102, 255)',
+            grey: 'rgb(201, 203, 207)'
+        };
+
+        window.onload = function() {
+            var ctx1 = document.getElementById('canvas1').getContext('2d');
+            window.myChart1 = new Chart(ctx1, config1);
+
+            var ctx2 = document.getElementById('canvas2').getContext('2d');
+            window.myChart2 = new Chart(ctx2, config2);
+        };
+
+        var config1 = {
+            type: 'line',
+            data: {
+                labels: ["항목1", "항목2", "항목3", "항목4"],
+                datasets: [{
+                    label: "계열1",
+                    backgroundColor: window.chartColors.red,
+					borderColor: window.chartColors.red,
+                    borderWidth: 3,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    pointRadius: 4,
+					pointHoverRadius: 5,
+                    data: [0, 30, 100, 80],
+                }, {
+                    label: "계열2",
+                    backgroundColor: window.chartColors.blue,
+					borderColor: window.chartColors.blue,
+                    borderWidth: 3,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    pointRadius: 4,
+					pointHoverRadius: 5,
+                    data: [0, 40, 80, 60],
+                }, {
+                    label: "계열3",
+                    backgroundColor: window.chartColors.yellow,
+					borderColor: window.chartColors.yellow,
+                    borderWidth: 3,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    pointRadius: 4,
+					pointHoverRadius: 5,
+                    data: [90, 30, 60, 70],
+                }, {
+                    label: "계열4",
+                    backgroundColor: window.chartColors.green,
+					borderColor: window.chartColors.green,
+                    borderWidth: 3,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    pointRadius: 4,
+					pointHoverRadius: 5,
+                    data: [60, 40, 50, 30],
+                }]
+            },
+            // Configuration options go here
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        fontColor : '#1d1f2d',
+                        fontSize : 13,
+                        fontFamily : 'Noto Sans KR',
+                        usePointStyle: true,
+                        boxWidth: 8,
+                    }
+                },
+				hover: {
+					mode: 'index',
+					intersect: false
+				},
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        scaleLabel: {
+                            display: false,
+                        },
+                        ticks:{
+                            fontColor : '#1d1f2d',
+                            fontSize : 13,
+                            fontFamily : 'arial',
+                        },
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            fontColor : '#1d1f2d',
+                            fontSize : 13,
+                            fontFamily : 'Noto Sans KR',
+                            beginAtZero: true,
+                            padding:15,
+                            stepSize: 20 // forces step size to be 20 units
+                        },
+                        gridLines:{
+                            drawBorder:false,
+                        }
+                    }]
+                }
+            }
+        };
+
+        var config2 = {
+            type: 'bar',
+            data: {
+                labels: ["항목1", "항목2", "항목3", "항목4"],
+                datasets: [{
+                    label: "계열1",
+                    backgroundColor: window.chartColors.red,
+					borderColor: window.chartColors.red,
+                    borderWidth: 3,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    pointRadius: 4,
+					pointHoverRadius: 5,
+                    data: [0, 30, 100, 80],
+                }, {
+                    label: "계열2",
+                    backgroundColor: window.chartColors.blue,
+					borderColor: window.chartColors.blue,
+                    borderWidth: 3,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    pointRadius: 4,
+					pointHoverRadius: 5,
+                    data: [0, 40, 80, 60],
+                }, {
+                    label: "계열3",
+                    backgroundColor: window.chartColors.yellow,
+					borderColor: window.chartColors.yellow,
+                    borderWidth: 3,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    pointRadius: 4,
+					pointHoverRadius: 5,
+                    data: [90, 30, 60, 70],
+                }, {
+                    label: "계열4",
+                    backgroundColor: window.chartColors.green,
+					borderColor: window.chartColors.green,
+                    borderWidth: 3,
+                    fill: false, // line의 아래쪽을 색칠할 것인가?
+                    pointRadius: 4,
+					pointHoverRadius: 5,
+                    data: [60, 40, 50, 30],
+                }]
+            },
+            // Configuration options go here
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                legend: {
+                    position: 'bottom',
+                    labels: {
+                        fontColor : '#1d1f2d',
+                        fontSize : 13,
+                        fontFamily : 'Noto Sans KR',
+                        usePointStyle: true,
+                        boxWidth: 8,
+                    }
+                },
+				hover: {
+					mode: 'index',
+					intersect: false
+				},
+                scales: {
+                    xAxes: [{
+                        gridLines: {
+                            display: false,
+                        },
+                        scaleLabel: {
+                            display: false,
+                        },
+                        ticks:{
+                            fontColor : '#1d1f2d',
+                            fontSize : 13,
+                            fontFamily : 'arial',
+
+                        },
+                    }],
+                    yAxes: [{
+                        scaleLabel: {
+                            drawBorder: false,
+                        },
+                        ticks: {
+                            fontColor : '#1d1f2d',
+                            fontSize : 13,
+                            fontFamily : 'Noto Sans KR',
+                            beginAtZero: true,
+                            padding:15,
+                            stepSize: 20 // forces step size to be 20 units
+                        },
+                        gridLines:{
+                            drawBorder:false,
+                        }
+                    }]
+                }
+            }
+        };
+    </script>
+</body>
+
+</html>

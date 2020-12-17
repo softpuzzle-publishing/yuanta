@@ -114,26 +114,28 @@ var Common = {
 		});
 	},
 	tab : function(){
-		const breakpoint = window.matchMedia( '(min-width:1279px)' );
+		if($('.tab-swiper').length > 0){
+			const breakpoint = window.matchMedia( '(min-width:1279px)' );
 
-		let tabSwiper;
+			let tabSwiper;
 
-		const breakpointChecker = function() {
-			if ( breakpoint.matches === true ) {
-				if ( tabSwiper !== undefined ) tabSwiper.destroy( true, true );
-				return;
-			} else if ( breakpoint.matches === false ) {
-				return enableSwiper();
-			}
-		};
-		const enableSwiper = function() {
-			tabSwiper = new Swiper('.tab-swiper .swiper-container', {
-				slidesPerView: 'auto',
-				freeMode: true,
-			});
-		};
-		breakpoint.addListener(breakpointChecker);
-		breakpointChecker();
+			const breakpointChecker = function() {
+				if ( breakpoint.matches === true ) {
+					if ( tabSwiper !== undefined ) tabSwiper.destroy( true, true );
+					return;
+				} else if ( breakpoint.matches === false ) {
+					return enableSwiper();
+				}
+			};
+			const enableSwiper = function() {
+				tabSwiper = new Swiper('.tab-swiper .swiper-container', {
+					slidesPerView: 'auto',
+					freeMode: true,
+				});
+			};
+			breakpoint.addListener(breakpointChecker);
+			breakpointChecker();
+		}
 	},
 	event : function(){
 		//datepicker

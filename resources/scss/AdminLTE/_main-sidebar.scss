@@ -126,7 +126,7 @@
       > .nav-item{
 
         > .nav-link{
-          padding-left: 33px;line-height: 2;
+          padding-left: 33px;line-height: 1.6;
           &::before{content: '-';color: $primary;opacity: 0;display: inline-block;margin-right: 22px;}
         }
         > .nav-link.active{
@@ -417,6 +417,7 @@
     // First Level Submenu
     > .nav-treeview {
       background: $sidebar-dark-submenu-bg;
+      padding-bottom: .5rem;
     }
   }
 
