@@ -62,7 +62,7 @@
 }
 
 .ui-jqgrid .ui-jqgrid-htable th {
-    height: 30px;
+    height: 39px;
     padding: 5px;
 }
 
@@ -126,7 +126,7 @@
 }
 
 .ui-jqgrid .ui-icon-desc {
-    margin-top: 3px;
+    margin-top: 5px;
     height: 12px
 }
 
@@ -142,7 +142,7 @@
 }
 
 .ui-jqgrid .ui-jqgrid-sortable {
-    cursor: pointer
+    cursor: pointer;line-height: 1.4;
 }
 
 .ui-jqgrid tr.ui-search-toolbar th {
@@ -185,7 +185,7 @@ tr.ui-search-toolbar select {
     font-weight: normal;
     overflow: hidden;
     white-space: pre;
-    height: 30px;
+    height: 39px;
     padding: 5px;
     border-bottom-width: 1px;
     border-bottom-color: inherit;

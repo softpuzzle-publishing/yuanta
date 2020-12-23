@@ -58,12 +58,13 @@
   }
 
   .card-body.p-0 & {
-    thead > tr > th,
-    thead > tr > td,
-    tbody > tr > th,
-    tbody > tr > td {
+    thead > tr > th:not(.text-center),
+    thead > tr > td:not(.text-center),
+    tbody > tr > th:not(.text-center),
+    tbody > tr > td:not(.text-center) {
       &:first-of-type {
-        padding-left: map-get($spacers, 4);
+        //padding-left: map-get($spacers, 4);
+        padding-left: 1.25rem;
       }
 
       &:last-of-type {

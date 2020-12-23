@@ -24,7 +24,7 @@
     <!-- swiper -->
     <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
     <!-- Bootstrap & Template style -->
-    <link rel="stylesheet" href="../../resources/css/AdminLte.css">
+    <link rel="stylesheet" href="../../resources/css/AdminLTE.css">
     <!-- Yuanta style -->
     <link rel="stylesheet" href="../../resources/css/yuanta.css">
     <!-- Additional style -->
@@ -33,8 +33,10 @@
     <style>
         #guide{overflow: hidden;}
         section{float: left;padding: 15px;width: 50%;}
-        h2{margin-bottom: 15px;font-size: 24px !important;}
-        h3{font-size: 18px !important;}
+        section h2{margin-bottom: 15px;font-size: 24px !important;}
+        section h2::before{content: '[';}
+        section h2::after{content: ']';}
+        section h3{font-size: 18px !important;}
         div + h3{margin-top: 1rem;}
         @media (max-width: 991.98px){
             section{width: 100%;padding: 15px 10px;}
@@ -104,8 +106,7 @@
                 <li class="nav-item dropdown nav-noti">
                     <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
                         <i class="material-icons">notifications</i>
-                        <span class="badge badge-danger navbar-badge"></span>
-                        <span class="circle"></span>
+                        <span class="badge badge-danger navbar-badge">5</span>
                     </a>
                     <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
                         <a href="#" class="dropdown-item">
@@ -160,8 +161,8 @@
                                 </p>
                             </a>
                         </li>
-                        <li class="nav-item has-treeview active menu-open">
-                            <a href="#" class="nav-link active">
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
                                 <i class="nav-icon material-icons">leaderboard</i>
                                 <p>
                                     운영모니터링
@@ -170,18 +171,48 @@
                             </a>
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
-                                        <p>Level 2</p>
+                                    <a href="#" class="nav-link">
+                                        <p>업무별 현재상황 조회</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <p>Level 2</p>
+                                        <p>온라인 주요 TR현황</p>
                                     </a>
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <p>Level 2</p>
+                                        <p>온라인 이상 징후</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>HTS Queue 현황</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>NMS</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>해외/기타 FEP</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>미들웨어</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>온라인업무</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>데이터 정합성</p>
                                     </a>
                                 </li>
                             </ul>
@@ -232,11 +263,6 @@
                                 </li>
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <p></p>
-                                    </a>
-                                </li>
-                                <li class="nav-item">
-                                    <a href="#" class="nav-link active">
                                         <p>시스템로그 통합조회</p>
                                     </a>
                                 </li>
@@ -253,7 +279,7 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <p>Level 2</p>
+                                        <p>운영관제경보내역 관리</p>
                                     </a>
                                 </li>
                             </ul>
@@ -269,7 +295,27 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <p>Level 2</p>
+                                        <p>운영관제코드 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>운영관제 SMS통보 정책</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>운영관제 영향도 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>운영 데이터 증가추이</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>사용자 관리</p>
                                     </a>
                                 </li>
                             </ul>
@@ -285,7 +331,47 @@
                             <ul class="nav nav-treeview">
                                 <li class="nav-item">
                                     <a href="#" class="nav-link">
-                                        <p>Level 2</p>
+                                        <p>사용자 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>개인정보관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>권한관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>코드 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>시스템일일점검</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>관제게시판</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>SMS 발송내역</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>연락처 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>라이선스</p>
                                     </a>
                                 </li>
                             </ul>
@@ -316,38 +402,28 @@
                             <div class="status">
                                 <div class="row">
                                     <div class="col-4 col-lg-3 col-xl">
-                                        <div class="box bg-success">
+                                        <div class="box bg-success" data-toggle="tooltip" data-placement="bottom" title="정상">
                                             <div>WAS(Process)</div>
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-3 col-xl">
-                                        <div class="box bg-info">
-                                            <div>WAS(Process)</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-lg-3 col-xl">
-                                        <div class="box bg-warning">
+                                        <div class="box bg-warning" data-toggle="tooltip" data-placement="bottom" title="주의">
                                             <div>WAS(Log)</div>
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-3 col-xl">
-                                        <div class="box bg-orange">
+                                        <div class="box bg-orange" data-toggle="tooltip" data-placement="bottom" title="경고">
                                             <div>TUXEDO(Process)</div>
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-3 col-xl">
-                                        <div class="box bg-danger">
+                                        <div class="box bg-danger" data-toggle="tooltip" data-placement="bottom" title="장애">
                                             <div>TUXEDO(Log)</div>
                                         </div>
                                     </div>
                                     <div class="col-4 col-lg-3 col-xl">
-                                        <div class="box bg-gray">
-                                            <div>TUXEDO(Log)</div>
-                                        </div>
-                                    </div>
-                                    <div class="col-4 col-lg-3 col-xl">
-                                        <div class="box">
-                                            <div>TUXEDO(Log)</div>
+                                        <div class="box bg-gray" data-toggle="tooltip" data-placement="bottom" title="데이터 없음">
+                                            <div>WebServer</div>
                                         </div>
                                     </div>
                                 </div>
@@ -399,69 +475,88 @@
                             <div class="hr"></div>
                         </div>
                     </section>
-                    <section>
+                    <section style="width:100%">
                         <h2>버튼</h2>
-                        <h3>normal</h3>
-                        <div>
-                            <button type="button" class="btn btn-flat btn-primary min-width">버튼</button>
-                            <button type="button" class="btn btn-flat btn-success">버튼</button>
-                            <button type="button" class="btn btn-flat btn-info">버튼</button>
-                            <button type="button" class="btn btn-flat btn-warning">버튼</button>
-                            <button type="button" class="btn btn-flat btn-danger">버튼</button>
-                            <button type="button" class="btn btn-flat btn-light">버튼</button>
-                            <button type="button" class="btn btn-flat btn-gray">버튼</button>
-                            <button type="button" class="btn btn-flat btn-dark">버튼</button>
-                        </div>
-                        <div class="mt-1">
-                            <button type="button" class="btn btn-flat btn-outline-primary min-width">버튼</button>
-                            <button type="button" class="btn btn-flat btn-outline-success">버튼</button>
-                            <button type="button" class="btn btn-flat btn-outline-info">버튼</button>
-                            <button type="button" class="btn btn-flat btn-outline-warning">버튼</button>
-                            <button type="button" class="btn btn-flat btn-outline-danger">버튼</button>
-                            <button type="button" class="btn btn-flat btn-outline-light">버튼</button>
-                            <button type="button" class="btn btn-flat btn-outline-gray">버튼</button>
-                            <button type="button" class="btn btn-flat btn-outline-dark">버튼</button>
-                        </div>
-                        <h3>large</h3>
-                        <div>
-                            <button type="button" class="btn btn-flat btn-lg btn-primary">버튼</button>
-                            <button type="button" class="btn btn-flat btn-lg btn-light">버튼</button>
-                            <button type="button" class="btn btn-flat btn-lg btn-outline-light">버튼</button>
-                            <button type="button" class="btn btn-flat btn-lg btn-dark">버튼</button>
-                        </div>
-                        <h3>small</h3>
-                        <div>
-                            <button type="button" class="btn btn-flat btn-sm btn-primary">버튼</button>
-                            <button type="button" class="btn btn-flat btn-sm btn-light">버튼</button>
-                            <button type="button" class="btn btn-flat btn-sm btn-outline-light">버튼</button>
-                            <button type="button" class="btn btn-flat btn-sm btn-dark">버튼</button>
-                        </div>
-                        <h3>100%(block)</h3>
-                        <div>
-                            <button type="button" class="btn btn-flat btn-lg btn-primary btn-block">버튼</button>
-                            <button type="button" class="btn btn-flat btn-lg btn-light btn-block">버튼</button>
-                            <button type="button" class="btn btn-flat btn-lg btn-outline-light btn-block">버튼</button>
-                            <button type="button" class="btn btn-flat btn-lg btn-dark btn-block">버튼</button>
-                        </div>
-                        <h3>+ icons</h3>
-                        <div>
-                            <button type="button" class="btn btn-flat btn-lg btn-dark">등록 <i class="fas fa-arrow-alt-circle-right"></i></button>
-                            <button type="button" class="btn btn-flat btn-lg btn-dark"><i class="fas fa-arrow-alt-circle-left"></i> 삭제</button>
-                        </div>
-                        <div>
-                            <button type="button" class="btn btn-flat btn-dark"><i class="material-icons">north</i> 위로</button>
-                            <button type="button" class="btn btn-flat btn-dark"><i class="material-icons">south</i> 아래로</button>
-                        </div>
-                    </section>
-                    <section>
-                        <h2>버튼 그룹</h2>
-                        <div>
-                            <div class="btn-group" role="group">
-                                <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-left"></i></button>
-                                <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-center"></i>
-                                </button>
-                                <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-right"></i>
-                                </button>
+                        <div class="row">
+                            <div class="col">
+                                <h3>normal</h3>
+                                <div>
+                                    <button type="button" class="btn btn-flat btn-primary min-width">primary</button>
+                                    <button type="button" class="btn btn-flat btn-secondary">secondary</button>
+                                    <button type="button" class="btn btn-flat btn-gray">gray</button>
+                                    <button type="button" class="btn btn-flat btn-success">success</button>
+                                    <button type="button" class="btn btn-flat btn-info">info</button>
+                                    <button type="button" class="btn btn-flat btn-warning">warning</button>
+                                    <button type="button" class="btn btn-flat btn-danger">danger</button>
+                                    <button type="button" class="btn btn-flat btn-light">light</button>
+                                    <button type="button" class="btn btn-flat btn-dark">dark</button>
+                                </div>
+                                <!-- .hover는 색상 확인용이므로 쓰이지 않습ㄴ디ㅏ. -->
+                                <h3>hover</h3>
+                                <div>
+                                    <button type="button" class="btn btn-flat btn-primary min-width hover">primary</button>
+                                    <button type="button" class="btn btn-flat btn-secondary hover">secondary</button>
+                                    <button type="button" class="btn btn-flat btn-gray hover">gray</button>
+                                    <button type="button" class="btn btn-flat btn-success hover">success</button>
+                                    <button type="button" class="btn btn-flat btn-info hover">info</button>
+                                    <button type="button" class="btn btn-flat btn-warning hover">warning</button>
+                                    <button type="button" class="btn btn-flat btn-danger hover">danger</button>
+                                    <button type="button" class="btn btn-flat btn-light hover">light</button>
+                                    <button type="button" class="btn btn-flat btn-dark hover">dark</button>
+                                </div>
+                                <div class="mt-1">
+                                    <button type="button" class="btn btn-flat btn-outline-primary min-width">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-outline-secondary">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-outline-gray">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-outline-success">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-outline-info">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-outline-warning">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-outline-danger">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-outline-light">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-outline-dark">버튼</button>
+                                </div>
+                                <h3>large</h3>
+                                <div>
+                                    <button type="button" class="btn btn-flat btn-lg btn-primary">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-lg btn-light">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-lg btn-outline-light">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-lg btn-dark">버튼</button>
+                                </div>
+                                <h3>small</h3>
+                                <div>
+                                    <button type="button" class="btn btn-flat btn-sm btn-primary">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-sm btn-secondary">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-sm btn-light">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-sm btn-outline-light">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-sm btn-dark">버튼</button>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <h3>+ icons</h3>
+                                <div>
+                                    <button type="button" class="btn btn-flat btn-lg btn-dark">등록 <i class="fas fa-arrow-alt-circle-right"></i></button>
+                                    <button type="button" class="btn btn-flat btn-lg btn-dark"><i class="fas fa-arrow-alt-circle-left"></i> 삭제</button>
+                                    <button type="button" class="btn btn-flat btn-dark"><i class="material-icons">north</i> 위로</button>
+                                    <button type="button" class="btn btn-flat btn-dark"><i class="material-icons">south</i> 아래로</button>
+                                </div>
+                                <h3>버튼 그룹</h3>
+                                <div>
+                                    <div class="btn-group" role="group">
+                                        <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-left"></i></button>
+                                        <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-center"></i>
+                                        </button>
+                                        <button type="button" class="btn btn-default btn-flat"><i class="fas fa-align-right"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                                <h3>100%(block)</h3>
+                                <div>
+                                    <button type="button" class="btn btn-flat btn-lg btn-primary btn-block">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-lg btn-secondary btn-block">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-lg btn-light btn-block">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-lg btn-outline-light btn-block">버튼</button>
+                                    <button type="button" class="btn btn-flat btn-lg btn-dark btn-block">버튼</button>
+                                </div>
                             </div>
                         </div>
                     </section>
@@ -481,7 +576,7 @@
                         <div>
                             <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-event="datepicker">
                             <select name="" id="" class="form-control">
-                                <option value="">일반 셀렉트</option>
+                                <option value="">일반 셀렉트1</option>
                                 <option value="">111</option>
                                 <option value="">222</option>
                                 <option value="">333</option>
@@ -500,11 +595,18 @@
                                     <button class="btn btn-primary"><i class="material-icons">search</i></button>
                                 </span>
                             </div>
+
                             <div class="custom-file">
                                 <input type="file" class="custom-file-input" id="exampleInputFile">
                                 <label class="custom-file-label" for="exampleInputFile">Choose file</label>
                             </div>
+
+                            <div class="form-control-wrap">
+                                <input class="form-control form-control-lg" type="password" id="fPw">
+                                <a href="#" id="btn-eye"><i class="material-icons">visibility</i></a>
+                            </div>
                         </div>
+
                         <div>
                             <div class="custom-control custom-switch">
                                 <input type="checkbox" class="custom-control-input" id="customSwitch1">
@@ -572,7 +674,7 @@
                             <div class="text-center">텍스트 정렬</div>
                             <div class="text-right">텍스트 정렬</div>
                         </div>
-                    </section>
+                    </section><!--
                     <section>
                         <h2>Card</h2>
                         <div>
@@ -582,13 +684,23 @@
                                 </div>
                             </div>
                         </div>
-                    </section>
+                    </section> -->
                     <section style="width: 100%;">
                         <h2>Table</h2>
                         <h3>jqGrid</h3>
                         <div class="row">
                             <div class="col">
+                                <div class="table-dark table-bordered">
+                                    <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_grdCode" dir="ltr" style="width: 371px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_grdCode"></div><div class="loading ui-state-default ui-state-active" id="load_grdCode" style="display: none;">조회중...</div><div class="ui-jqgrid-view" id="gview_grdCode" style="width: 371px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 371px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 353px;" role="grid" aria-labelledby="gbox_grdCode" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="grdCode_rn" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><div id="jqgh_grdCode_rn"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_keyid" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_keyid" class="ui-jqgrid-sortable"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcode" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcode" class="ui-jqgrid-sortable">코드<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcodename" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcodename" class="ui-jqgrid-sortable">코드명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gdesc" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gdesc" class="ui-jqgrid-sortable">코드설명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_use" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_use" class="ui-jqgrid-sortable">사용<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: 100px; width: 371px;"><div style="position:relative;"><div></div><table id="grdCode" style="width: 353px;" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_grdCode" class="ui-jqgrid-btable"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:25px;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 25px;"></td></tr><tr role="row" id="1" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;width: 25px;" title="1" aria-describedby="grdCode_rn">1</td><td role="gridcell" style="text-align:left;display:none;" title="167a3253-bc57-41d1-b048-3741d1cd337a" aria-describedby="grdCode_keyid">167a3253-bc57-41d1-b048-3741d1cd337a</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="2" tabindex="0" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary ui-state-highlight" aria-selected="true"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="2" aria-describedby="grdCode_rn">2</td><td role="gridcell" style="text-align:left;display:none;" title="257e3933-dba9-4870-a92e-300defdbeb91" aria-describedby="grdCode_keyid">257e3933-dba9-4870-a92e-300defdbeb91</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="3" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="3" aria-describedby="grdCode_rn">3</td><td role="gridcell" style="text-align:left;display:none;" title="9573cbab-b815-47ff-93be-34f4c8273a1a" aria-describedby="grdCode_keyid">9573cbab-b815-47ff-93be-34f4c8273a1a</td><td role="gridcell" style="text-align:center;" title="1111" aria-describedby="grdCode_gcode">1111</td><td role="gridcell" style="text-align:center;" title="11" aria-describedby="grdCode_gcodename">11</td><td role="gridcell" style="text-align:left;" title="11" aria-describedby="grdCode_gdesc">11</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="4" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="4" aria-describedby="grdCode_rn">4</td><td role="gridcell" style="text-align:left;display:none;" title="b5dc98d6-32af-453b-acb1-1d44bb93d8d2" aria-describedby="grdCode_keyid">b5dc98d6-32af-453b-acb1-1d44bb93d8d2</td><td role="gridcell" style="text-align:center;" title="3525" aria-describedby="grdCode_gcode">3525</td><td role="gridcell" style="text-align:center;" title="555" aria-describedby="grdCode_gcodename">555</td><td role="gridcell" style="text-align:left;" title="222" aria-describedby="grdCode_gdesc">222</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="5" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="5" aria-describedby="grdCode_rn">5</td><td role="gridcell" style="text-align:left;display:none;" title="2f9f3d58-450b-44ea-9150-4b0a7cb472de" aria-describedby="grdCode_keyid">2f9f3d58-450b-44ea-9150-4b0a7cb472de</td><td role="gridcell" style="text-align:center;" title="13253" aria-describedby="grdCode_gcode">13253</td><td role="gridcell" style="text-align:center;" title="146" aria-describedby="grdCode_gcodename">146</td><td role="gridcell" style="text-align:left;" title="1" aria-describedby="grdCode_gdesc">1</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="6" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="6" aria-describedby="grdCode_rn">6</td><td role="gridcell" style="text-align:left;display:none;" title="78d39912-20c9-498e-8b90-2420b8623a62" aria-describedby="grdCode_keyid">78d39912-20c9-498e-8b90-2420b8623a62</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcode">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcodename">ㅋㅋㅋ</td><td role="gridcell" style="text-align:left;" title="ㅋㅋㅋ" aria-describedby="grdCode_gdesc">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="7" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="7" aria-describedby="grdCode_rn">7</td><td role="gridcell" style="text-align:left;display:none;" title="9a9f461e-a246-4a43-a694-df73d2a8bd35" aria-describedby="grdCode_keyid">9a9f461e-a246-4a43-a694-df73d2a8bd35</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcode">테스트중임</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcodename">테스트중임</td><td role="gridcell" style="text-align:left;" title="테스트중임" aria-describedby="grdCode_gdesc">테스트중임</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="8" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="8" aria-describedby="grdCode_rn">8</td><td role="gridcell" style="text-align:left;display:none;" title="A12345" aria-describedby="grdCode_keyid">A12345</td><td role="gridcell" style="text-align:center;" title="UI_AUTH" aria-describedby="grdCode_gcode">UI_AUTH</td><td role="gridcell" style="text-align:center;" title="권한관리" aria-describedby="grdCode_gcodename">권한관리</td><td role="gridcell" style="text-align:left;" title="메뉴별 권한조정 화면" aria-describedby="grdCode_gdesc">메뉴별 권한조정 화면</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="9" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="9" aria-describedby="grdCode_rn">9</td><td role="gridcell" style="text-align:left;display:none;" title="eqweqwe" aria-describedby="grdCode_keyid">eqweqwe</td><td role="gridcell" style="text-align:center;" title="BBS_TYPE" aria-describedby="grdCode_gcode">BBS_TYPE</td><td role="gridcell" style="text-align:center;" title="게시판 종류" aria-describedby="grdCode_gcodename">게시판 종류</td><td role="gridcell" style="text-align:left;" title="게시판종류" aria-describedby="grdCode_gdesc">게시판종류</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="10" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="10" aria-describedby="grdCode_rn">10</td><td role="gridcell" style="text-align:left;display:none;" title="adf12r4" aria-describedby="grdCode_keyid">adf12r4</td><td role="gridcell" style="text-align:center;" title="DAILY_SEC_STAT" aria-describedby="grdCode_gcode">DAILY_SEC_STAT</td><td role="gridcell" style="text-align:center;" title="일일보안상태" aria-describedby="grdCode_gcodename">일일보안상태</td><td role="gridcell" style="text-align:left;" title="일일보안현황보고 보안상태코드" aria-describedby="grdCode_gdesc">일일보안현황보고 보안상태코드</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mgrdCode">&nbsp;</div></div>
+                                </div>
+                            </div>
+                            <div class="col">
                                 <div class="table-dark">
+                                    <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_grdCode" dir="ltr" style="width: 371px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_grdCode"></div><div class="loading ui-state-default ui-state-active" id="load_grdCode" style="display: none;">조회중...</div><div class="ui-jqgrid-view" id="gview_grdCode" style="width: 371px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 371px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 353px;" role="grid" aria-labelledby="gbox_grdCode" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="grdCode_rn" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><div id="jqgh_grdCode_rn"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_keyid" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_keyid" class="ui-jqgrid-sortable"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcode" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcode" class="ui-jqgrid-sortable">코드<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcodename" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcodename" class="ui-jqgrid-sortable">코드명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gdesc" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gdesc" class="ui-jqgrid-sortable">코드설명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_use" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_use" class="ui-jqgrid-sortable">사용<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: 100px; width: 371px;"><div style="position:relative;"><div></div><table id="grdCode" style="width: 353px;" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_grdCode" class="ui-jqgrid-btable"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:25px;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 25px;"></td></tr><tr role="row" id="1" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;width: 25px;" title="1" aria-describedby="grdCode_rn">1</td><td role="gridcell" style="text-align:left;display:none;" title="167a3253-bc57-41d1-b048-3741d1cd337a" aria-describedby="grdCode_keyid">167a3253-bc57-41d1-b048-3741d1cd337a</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="2" tabindex="0" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary ui-state-highlight" aria-selected="true"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="2" aria-describedby="grdCode_rn">2</td><td role="gridcell" style="text-align:left;display:none;" title="257e3933-dba9-4870-a92e-300defdbeb91" aria-describedby="grdCode_keyid">257e3933-dba9-4870-a92e-300defdbeb91</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="3" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="3" aria-describedby="grdCode_rn">3</td><td role="gridcell" style="text-align:left;display:none;" title="9573cbab-b815-47ff-93be-34f4c8273a1a" aria-describedby="grdCode_keyid">9573cbab-b815-47ff-93be-34f4c8273a1a</td><td role="gridcell" style="text-align:center;" title="1111" aria-describedby="grdCode_gcode">1111</td><td role="gridcell" style="text-align:center;" title="11" aria-describedby="grdCode_gcodename">11</td><td role="gridcell" style="text-align:left;" title="11" aria-describedby="grdCode_gdesc">11</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="4" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="4" aria-describedby="grdCode_rn">4</td><td role="gridcell" style="text-align:left;display:none;" title="b5dc98d6-32af-453b-acb1-1d44bb93d8d2" aria-describedby="grdCode_keyid">b5dc98d6-32af-453b-acb1-1d44bb93d8d2</td><td role="gridcell" style="text-align:center;" title="3525" aria-describedby="grdCode_gcode">3525</td><td role="gridcell" style="text-align:center;" title="555" aria-describedby="grdCode_gcodename">555</td><td role="gridcell" style="text-align:left;" title="222" aria-describedby="grdCode_gdesc">222</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="5" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="5" aria-describedby="grdCode_rn">5</td><td role="gridcell" style="text-align:left;display:none;" title="2f9f3d58-450b-44ea-9150-4b0a7cb472de" aria-describedby="grdCode_keyid">2f9f3d58-450b-44ea-9150-4b0a7cb472de</td><td role="gridcell" style="text-align:center;" title="13253" aria-describedby="grdCode_gcode">13253</td><td role="gridcell" style="text-align:center;" title="146" aria-describedby="grdCode_gcodename">146</td><td role="gridcell" style="text-align:left;" title="1" aria-describedby="grdCode_gdesc">1</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="6" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="6" aria-describedby="grdCode_rn">6</td><td role="gridcell" style="text-align:left;display:none;" title="78d39912-20c9-498e-8b90-2420b8623a62" aria-describedby="grdCode_keyid">78d39912-20c9-498e-8b90-2420b8623a62</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcode">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcodename">ㅋㅋㅋ</td><td role="gridcell" style="text-align:left;" title="ㅋㅋㅋ" aria-describedby="grdCode_gdesc">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="7" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="7" aria-describedby="grdCode_rn">7</td><td role="gridcell" style="text-align:left;display:none;" title="9a9f461e-a246-4a43-a694-df73d2a8bd35" aria-describedby="grdCode_keyid">9a9f461e-a246-4a43-a694-df73d2a8bd35</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcode">테스트중임</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcodename">테스트중임</td><td role="gridcell" style="text-align:left;" title="테스트중임" aria-describedby="grdCode_gdesc">테스트중임</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="8" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="8" aria-describedby="grdCode_rn">8</td><td role="gridcell" style="text-align:left;display:none;" title="A12345" aria-describedby="grdCode_keyid">A12345</td><td role="gridcell" style="text-align:center;" title="UI_AUTH" aria-describedby="grdCode_gcode">UI_AUTH</td><td role="gridcell" style="text-align:center;" title="권한관리" aria-describedby="grdCode_gcodename">권한관리</td><td role="gridcell" style="text-align:left;" title="메뉴별 권한조정 화면" aria-describedby="grdCode_gdesc">메뉴별 권한조정 화면</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="9" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="9" aria-describedby="grdCode_rn">9</td><td role="gridcell" style="text-align:left;display:none;" title="eqweqwe" aria-describedby="grdCode_keyid">eqweqwe</td><td role="gridcell" style="text-align:center;" title="BBS_TYPE" aria-describedby="grdCode_gcode">BBS_TYPE</td><td role="gridcell" style="text-align:center;" title="게시판 종류" aria-describedby="grdCode_gcodename">게시판 종류</td><td role="gridcell" style="text-align:left;" title="게시판종류" aria-describedby="grdCode_gdesc">게시판종류</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="10" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="10" aria-describedby="grdCode_rn">10</td><td role="gridcell" style="text-align:left;display:none;" title="adf12r4" aria-describedby="grdCode_keyid">adf12r4</td><td role="gridcell" style="text-align:center;" title="DAILY_SEC_STAT" aria-describedby="grdCode_gcode">DAILY_SEC_STAT</td><td role="gridcell" style="text-align:center;" title="일일보안상태" aria-describedby="grdCode_gcodename">일일보안상태</td><td role="gridcell" style="text-align:left;" title="일일보안현황보고 보안상태코드" aria-describedby="grdCode_gdesc">일일보안현황보고 보안상태코드</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mgrdCode">&nbsp;</div></div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="table-light table-bordered">
                                     <div class="ui-jqgrid ui-widget ui-widget-content ui-corner-all" id="gbox_grdCode" dir="ltr" style="width: 371px;"><div class="ui-widget-overlay jqgrid-overlay" id="lui_grdCode"></div><div class="loading ui-state-default ui-state-active" id="load_grdCode" style="display: none;">조회중...</div><div class="ui-jqgrid-view" id="gview_grdCode" style="width: 371px;"><div class="ui-jqgrid-titlebar ui-widget-header ui-corner-top ui-helper-clearfix" style="display: none;"><a role="link" href="javascript:void(0)" class="ui-jqgrid-titlebar-close HeaderButton" style="right: 0px;"><span class="ui-icon ui-icon-circle-triangle-n"></span></a><span class="ui-jqgrid-title"></span></div><div class="ui-state-default ui-jqgrid-hdiv" style="width: 371px;"><div class="ui-jqgrid-hbox"><table class="ui-jqgrid-htable" style="width: 353px;" role="grid" aria-labelledby="gbox_grdCode" cellspacing="0" cellpadding="0" border="0"><thead><tr class="ui-jqgrid-labels" role="rowheader"><th id="grdCode_rn" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><div id="jqgh_grdCode_rn"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_keyid" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 150px; display: none;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_keyid" class="ui-jqgrid-sortable"><span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcode" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcode" class="ui-jqgrid-sortable">코드<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gcodename" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gcodename" class="ui-jqgrid-sortable">코드명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_gdesc" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 101px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_gdesc" class="ui-jqgrid-sortable">코드설명<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th><th id="grdCode_use" role="columnheader" class="ui-state-default ui-th-column ui-th-ltr" style="width: 25px;"><span class="ui-jqgrid-resize ui-jqgrid-resize-ltr" style="cursor: col-resize;">&nbsp;</span><div id="jqgh_grdCode_use" class="ui-jqgrid-sortable">사용<span class="s-ico" style="display:none"><span sort="asc" class="ui-grid-ico-sort ui-icon-asc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-n ui-sort-ltr"></span><span sort="desc" class="ui-grid-ico-sort ui-icon-desc ui-state-disabled ui-icon ui-icon-arrowthickstop-1-s ui-sort-ltr"></span></span></div></th></tr></thead></table></div></div><div class="ui-jqgrid-bdiv" style="height: 100px; width: 371px;"><div style="position:relative;"><div></div><table id="grdCode" style="width: 353px;" tabindex="0" cellspacing="0" cellpadding="0" border="0" role="grid" aria-multiselectable="false" aria-labelledby="gbox_grdCode" class="ui-jqgrid-btable"><tbody><tr class="jqgfirstrow" role="row" style="height:auto"><td role="gridcell" style="height:0px;width:25px;"></td><td role="gridcell" style="height:0px;width:150px;display:none;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 101px;"></td><td role="gridcell" style="height: 0px; width: 25px;"></td></tr><tr role="row" id="1" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;width: 25px;" title="1" aria-describedby="grdCode_rn">1</td><td role="gridcell" style="text-align:left;display:none;" title="167a3253-bc57-41d1-b048-3741d1cd337a" aria-describedby="grdCode_keyid">167a3253-bc57-41d1-b048-3741d1cd337a</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="2" tabindex="0" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary ui-state-highlight" aria-selected="true"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="2" aria-describedby="grdCode_rn">2</td><td role="gridcell" style="text-align:left;display:none;" title="257e3933-dba9-4870-a92e-300defdbeb91" aria-describedby="grdCode_keyid">257e3933-dba9-4870-a92e-300defdbeb91</td><td role="gridcell" style="text-align:center;" title="2222" aria-describedby="grdCode_gcode">2222</td><td role="gridcell" style="text-align:center;" title="22" aria-describedby="grdCode_gcodename">22</td><td role="gridcell" style="text-align:left;" title="22" aria-describedby="grdCode_gdesc">22</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="3" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="3" aria-describedby="grdCode_rn">3</td><td role="gridcell" style="text-align:left;display:none;" title="9573cbab-b815-47ff-93be-34f4c8273a1a" aria-describedby="grdCode_keyid">9573cbab-b815-47ff-93be-34f4c8273a1a</td><td role="gridcell" style="text-align:center;" title="1111" aria-describedby="grdCode_gcode">1111</td><td role="gridcell" style="text-align:center;" title="11" aria-describedby="grdCode_gcodename">11</td><td role="gridcell" style="text-align:left;" title="11" aria-describedby="grdCode_gdesc">11</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="4" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="4" aria-describedby="grdCode_rn">4</td><td role="gridcell" style="text-align:left;display:none;" title="b5dc98d6-32af-453b-acb1-1d44bb93d8d2" aria-describedby="grdCode_keyid">b5dc98d6-32af-453b-acb1-1d44bb93d8d2</td><td role="gridcell" style="text-align:center;" title="3525" aria-describedby="grdCode_gcode">3525</td><td role="gridcell" style="text-align:center;" title="555" aria-describedby="grdCode_gcodename">555</td><td role="gridcell" style="text-align:left;" title="222" aria-describedby="grdCode_gdesc">222</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="5" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="5" aria-describedby="grdCode_rn">5</td><td role="gridcell" style="text-align:left;display:none;" title="2f9f3d58-450b-44ea-9150-4b0a7cb472de" aria-describedby="grdCode_keyid">2f9f3d58-450b-44ea-9150-4b0a7cb472de</td><td role="gridcell" style="text-align:center;" title="13253" aria-describedby="grdCode_gcode">13253</td><td role="gridcell" style="text-align:center;" title="146" aria-describedby="grdCode_gcodename">146</td><td role="gridcell" style="text-align:left;" title="1" aria-describedby="grdCode_gdesc">1</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="6" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="6" aria-describedby="grdCode_rn">6</td><td role="gridcell" style="text-align:left;display:none;" title="78d39912-20c9-498e-8b90-2420b8623a62" aria-describedby="grdCode_keyid">78d39912-20c9-498e-8b90-2420b8623a62</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcode">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="ㅋㅋㅋ" aria-describedby="grdCode_gcodename">ㅋㅋㅋ</td><td role="gridcell" style="text-align:left;" title="ㅋㅋㅋ" aria-describedby="grdCode_gdesc">ㅋㅋㅋ</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="7" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="7" aria-describedby="grdCode_rn">7</td><td role="gridcell" style="text-align:left;display:none;" title="9a9f461e-a246-4a43-a694-df73d2a8bd35" aria-describedby="grdCode_keyid">9a9f461e-a246-4a43-a694-df73d2a8bd35</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcode">테스트중임</td><td role="gridcell" style="text-align:center;" title="테스트중임" aria-describedby="grdCode_gcodename">테스트중임</td><td role="gridcell" style="text-align:left;" title="테스트중임" aria-describedby="grdCode_gdesc">테스트중임</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="8" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="8" aria-describedby="grdCode_rn">8</td><td role="gridcell" style="text-align:left;display:none;" title="A12345" aria-describedby="grdCode_keyid">A12345</td><td role="gridcell" style="text-align:center;" title="UI_AUTH" aria-describedby="grdCode_gcode">UI_AUTH</td><td role="gridcell" style="text-align:center;" title="권한관리" aria-describedby="grdCode_gcodename">권한관리</td><td role="gridcell" style="text-align:left;" title="메뉴별 권한조정 화면" aria-describedby="grdCode_gdesc">메뉴별 권한조정 화면</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr><tr role="row" id="9" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="9" aria-describedby="grdCode_rn">9</td><td role="gridcell" style="text-align:left;display:none;" title="eqweqwe" aria-describedby="grdCode_keyid">eqweqwe</td><td role="gridcell" style="text-align:center;" title="BBS_TYPE" aria-describedby="grdCode_gcode">BBS_TYPE</td><td role="gridcell" style="text-align:center;" title="게시판 종류" aria-describedby="grdCode_gcodename">게시판 종류</td><td role="gridcell" style="text-align:left;" title="게시판종류" aria-describedby="grdCode_gdesc">게시판종류</td><td role="gridcell" style="text-align:center;" title="N" aria-describedby="grdCode_use">N</td></tr><tr role="row" id="10" tabindex="-1" class="ui-widget-content jqgrow ui-row-ltr ui-priority-secondary" aria-selected="false"><td role="gridcell" class="ui-state-default jqgrid-rownum" style="text-align:center;" title="10" aria-describedby="grdCode_rn">10</td><td role="gridcell" style="text-align:left;display:none;" title="adf12r4" aria-describedby="grdCode_keyid">adf12r4</td><td role="gridcell" style="text-align:center;" title="DAILY_SEC_STAT" aria-describedby="grdCode_gcode">DAILY_SEC_STAT</td><td role="gridcell" style="text-align:center;" title="일일보안상태" aria-describedby="grdCode_gcodename">일일보안상태</td><td role="gridcell" style="text-align:left;" title="일일보안현황보고 보안상태코드" aria-describedby="grdCode_gdesc">일일보안현황보고 보안상태코드</td><td role="gridcell" style="text-align:center;" title="Y" aria-describedby="grdCode_use">Y</td></tr></tbody></table></div></div></div><div class="ui-jqgrid-resize-mark" id="rs_mgrdCode">&nbsp;</div></div>
                                 </div>
                             </div>
@@ -602,7 +714,133 @@
                         <div>
                             <div class="row">
                                 <div class="col">
+                                    <table class="table table-dark table-bordered table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center"></th>
+                                                <th class="text-center">관제코드</th>
+                                                <th class="text-center">관제명</th>
+                                                <th class="text-center">임계값</th>
+                                                <th class="text-center">생성자</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk1">
+                                                        <label class="custom-control-label" for="chk1"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk2">
+                                                        <label class="custom-control-label" for="chk2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk3">
+                                                        <label class="custom-control-label" for="chk3"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk4">
+                                                        <label class="custom-control-label" for="chk4"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col">
                                     <table class="table table-dark table-striped table-hover">
+                                        <thead>
+                                            <tr>
+                                                <th class="text-center"></th>
+                                                <th class="text-center">관제코드</th>
+                                                <th class="text-center">관제명</th>
+                                                <th class="text-center">임계값</th>
+                                                <th class="text-center">생성자</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk1">
+                                                        <label class="custom-control-label" for="chk1"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk2">
+                                                        <label class="custom-control-label" for="chk2"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk3">
+                                                        <label class="custom-control-label" for="chk3"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                            <tr>
+                                                <td class="text-center">
+                                                    <div class="custom-control custom-checkbox has-no-label">
+                                                        <input type="checkbox" class="custom-control-input" id="chk4">
+                                                        <label class="custom-control-label" for="chk4"></label>
+                                                    </div>
+                                                </td>
+                                                <td class="text-center">CAP1P001</td>
+                                                <td class="text-left">상품매체주문</td>
+                                                <td class="text-center">500</td>
+                                                <td class="text-center">홍길동</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="col">
+                                    <table class="table table-light table-bordered table-striped table-hover">
                                         <thead>
                                             <tr>
                                                 <th class="text-center"></th>
@@ -770,6 +1008,19 @@
 
                 $(target).siblings('.tab-pane').removeClass('active').removeClass('show');
                 $(target).addClass('show').addClass('active');
+            });
+
+            $('#btn-eye').on('click',function(e){
+                e.preventDefault();
+                if(!$(this).closest('.form-control-wrap').hasClass('show')){
+                    $(this).find('i').text('visibility_off');
+                    $(this).siblings('input').attr('type','text');
+                    $(this).closest('.form-control-wrap').addClass('show');
+                }else{
+                    $(this).find('i').text('visibility');
+                    $(this).siblings('input').attr('type','password');
+                    $(this).closest('.form-control-wrap').removeClass('show');
+                }
             });
         });
     </script>

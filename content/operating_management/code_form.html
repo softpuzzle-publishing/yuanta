@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>유안타증권 운영관제</title>
+
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+
+    <!-- Icon Fontawasome -->
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <!-- Icon Material -->
+    <link rel="stylesheet" href="../../resources/plugins/material-icons/material-icons.css">
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+    <!-- jqgrid -->
+    <link rel="stylesheet" href="../../resources/plugins/jqgrid/css/ui.jqgrid.css">
+    <!-- chartjs -->
+    <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
+    <!-- Bootstrap & Template style -->
+    <link rel="stylesheet" href="../../resources/css/AdminLTE.css">
+    <!-- Yuanta style -->
+    <link rel="stylesheet" href="../../resources/css/yuanta.css">
+    <!-- Additional style -->
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+</head>
+
+<body class="body-popup">
+    <!-- 실 컨텐츠 -->
+    <div class="popup-wrap">
+        <div class="popup-header">
+            <h1 class="popup-title">운영관제코드 관리</h1>
+            <a href="#" class="popup-close" onclick="window.close()">
+                <i class="icon-close"><span class="sr-only">팝업 닫기</span></i>
+            </a>
+        </div>
+        <div class="popup-body">
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">관제코드</label>
+                            </div>
+                            <div class="col-8">
+                                <div class="row row-5">
+                                    <div class="col">
+                                        <input type="text" class="form-control">
+                                    </div>
+                                    <div class="col-auto">
+                                        <button type="button" class="btn btn-dark">중복확인</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">관제명</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">장애등급</label>
+                            </div>
+                            <div class="col-8">
+                                <select name="" id="" class="form-control">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">업무구분(OP_CD)</label>
+                            </div>
+                            <div class="col-8">
+                                <select name="" id="" class="form-control">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">반복점검여부</label>
+                            </div>
+                            <div class="col-8">
+                                <select name="" id="" class="form-control">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">반복주기</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">점검시간구분</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">점검항목구분</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">공휴일체크</label>
+                            </div>
+                            <div class="col-8">
+                                <select name="" id="" class="form-control">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">주말체크</label>
+                            </div>
+                            <div class="col-8">
+                                <select name="" id="" class="form-control">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">증권사번</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">자동해제</label>
+                            </div>
+                            <div class="col-8">
+                                <select name="" id="" class="form-control">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">담당자</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">임계값</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">관제구분</label>
+                            </div>
+                            <div class="col-8">
+                                <select name="" id="" class="form-control">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">SMS발송여부</label>
+                            </div>
+                            <div class="col-8">
+                                <select name="" id="" class="form-control">
+                                    <option value=""></option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">SMS문구</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">장애판단기준</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-lg-3">
+                    <div class="form-group">
+                        <div class="row align-items-center">
+                            <div class="col-4">
+                                <label for="" class="mb-0">조치방법</label>
+                            </div>
+                            <div class="col-8">
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="hr"></div>
+            <div class="mt-3 d-flex justify-content-end">
+                <button type="button" class="btn btn-lg btn-primary min-width">저장</button>
+            </div>
+        </div>
+    </div>
+    <!-- //실 컨텐츠 -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.min.js"></script>
+    <!-- jqgrid -->
+    <script src="../../resources/plugins/jqgrid/js/jquery.jqGrid.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart.js/Chart.min.js"></script>
+    <!-- ui -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        });
+    </script>
+</body>
+
+</html>

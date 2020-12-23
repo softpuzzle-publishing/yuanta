@@ -44,32 +44,34 @@ $yellow:  #e6b239 !default;
 $green:   #56c488 !default;
 $teal:    #20c997 !default;
 $cyan:    #89adf5 !default;
+$sky:    #55afe3 !default;
 
 $colors: () !default;
 $colors: map-merge((
         "blue":       $blue,
-        "indigo":     $indigo,
-        "purple":     $purple,
-        "pink":       $pink,
+        //"indigo":     $indigo,
+        //"purple":     $purple,
+        //"pink":       $pink,
         "red":        $red,
         "orange":     $orange,
         "yellow":     $yellow,
         "green":      $green,
-        "teal":       $teal,
-        "cyan":       $cyan,
+        //"teal":       $teal,
+        //"cyan":       $cyan,
+        "sky":       $sky,
         "white":      $white,
         "gray":       $gray-600,
-        "gray-dark":  $gray-800
+        //"gray-dark":  $gray-800
 ), $colors);
 
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
-$info:          $cyan !default;
+$info:          $sky !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
-$gray:          #999bac !default;
+$gray:          #3f4862 !default;
 $dark:          #1d1f2d !default;
 
 $theme-colors: () !default;
@@ -82,7 +84,8 @@ $theme-colors: map-merge((
         "danger":     $danger,
         "light":      $light,
         "gray":       $gray,
-        "dark":       $dark
+        "dark":       $dark,
+        "purple":     $purple
 ), $theme-colors);
 // stylelint-enable
 
@@ -304,7 +307,7 @@ $hr-margin-y:                 $spacer !default;
 //
 // Customizes the `.table` component with basic values, each used across all table variations.
 
-$table-cell-padding:          5px !default;
+$table-cell-padding:          10px !default;
 $table-cell-padding-sm:       .25rem !default;
 
 $table-bg:                    transparent !default;
@@ -319,7 +322,7 @@ $table-head-bg:               $gray-200 !default;
 $table-head-color:            $gray-700 !default;
 
 $table-dark-bg:               $gray-900 !default;
-$table-dark-accent-bg:        rgba($white, .1) !default;
+$table-dark-accent-bg:        rgba($white, .05) !default;
 $table-dark-hover-bg:         rgba($white, .15) !default;
 $table-dark-border-color:     lighten($gray-900, 10%) !default;
 $table-dark-color:            $body-bg !default;
@@ -671,7 +674,7 @@ $jumbotron-bg:                      $gray-200 !default;
 $card-spacer-y:                     .75rem !default;
 $card-spacer-x:                     1.25rem !default;
 $card-border-width:                 0 !default; //$border-width !default;
-$card-border-radius:                $border-radius !default;
+$card-border-radius:                0 !default;
 $card-border-color:                 rgba($black, .125) !default;
 $card-inner-border-radius:          calc(#{$card-border-radius} - #{$card-border-width}) !default;
 $card-cap-bg:                       rgba($black, .03) !default;
@@ -691,8 +694,8 @@ $card-columns-margin:               $card-spacer-y !default;
 
 $tooltip-font-size:           $font-size-sm !default;
 $tooltip-max-width:           200px !default;
-$tooltip-color:               $white !default;
-$tooltip-bg:                  $black !default;
+$tooltip-color:               $black !default;
+$tooltip-bg:                  $white !default;
 $tooltip-border-radius:        $border-radius !default;
 $tooltip-opacity:             .9 !default;
 $tooltip-padding-y:           .25rem !default;

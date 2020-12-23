@@ -517,11 +517,11 @@ body:not(.sidebar-mini-md) {
     }
   }
 
-  @include media-breakpoint-down(sm) {
+  @include media-breakpoint-down(md) {
     &,
     &::before {
       box-shadow: none !important;
-      margin-left: -$sidebar-width;
+      margin-left: -100vw;
     }
 
     .sidebar-open & {
@@ -590,7 +590,7 @@ body:not(.sidebar-mini-md) {
 }
 
 .content-header {
-  padding: $content-padding-x;
+  padding: $content-padding-x $content-padding-x 0;
 
   .text-sm & {
     padding: 10px $content-padding-x;

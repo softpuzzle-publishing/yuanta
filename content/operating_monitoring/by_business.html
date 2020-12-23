@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -49,7 +50,7 @@
                 <li class="nav-item d-none d-xl-block">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">운영모니터링</li>
-                        <li class="breadcrumb-item active">데이터 정합성</li>
+                        <li class="breadcrumb-item active">미들웨어</li>
                     </ol>
                 </li>
             </ul>
@@ -85,11 +86,12 @@
                         <div class="dropdown-divider"></div>
                         <a href="#" class="dropdown-item"><i class="material-icons">history</i> 접속 히스토리</a>
                         <div class="dropdown-divider"></div>
-                        <a href="../login/login.html" class="dropdown-item"><i class="material-icons">exit_to_app</i> 로그아웃</a>
+                        <a href="../login/login.html" class="dropdown-item"><i class="material-icons">exit_to_app</i>
+                            로그아웃</a>
                     </div>
                 </li>
                 <li class="nav-item nav-access d-none d-lg-block">
-                    <div class="access-info">최근접속정보 : 2020.11.24  오후 05:12:12</div>
+                    <div class="access-info">최근접속정보 : 2020.11.24 오후 05:12:12</div>
                 </li>
                 <li class="nav-item dropdown nav-noti">
                     <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
@@ -124,7 +126,8 @@
             <a href="../dashboard/dashboard.html" class="brand-link d-none d-lg-block">
                 <span class="in">
                     <img src="../../resources/images/ic-logo-bi.svg" alt="유안타증권 Logo" class="brand-image">
-                    <span class="brand-text font-weight-light"><img src="../../resources/images/ic-logo-text.svg" alt="유안타증권"></span>
+                    <span class="brand-text font-weight-light"><img src="../../resources/images/ic-logo-text.svg"
+                            alt="유안타증권"></span>
                 </span>
             </a>
 
@@ -141,7 +144,8 @@
             <div class="sidebar">
                 <!-- Sidebar Menu -->
                 <nav>
-                    <ul class="nav nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="true">
+                    <ul class="nav nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu"
+                        data-accordion="true">
                         <li class="nav-item">
                             <a href="" class="nav-link">
                                 <i class="nav-icon material-icons">dashboard</i>
@@ -190,7 +194,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link">
+                                    <a href="#" class="nav-link active">
                                         <p>미들웨어</p>
                                     </a>
                                 </li>
@@ -200,7 +204,7 @@
                                     </a>
                                 </li>
                                 <li class="nav-item">
-                                    <a href="#" class="nav-link active">
+                                    <a href="#" class="nav-link">
                                         <p>데이터 정합성</p>
                                     </a>
                                 </li>
@@ -378,7 +382,7 @@
             <div class="content-header d-xl-none">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">운영모니터링</li>
-                    <li class="breadcrumb-item active">데이터 정합성</li>
+                    <li class="breadcrumb-item active">미들웨어</li>
                 </ol>
             </div>
             <!-- /.content-header -->
@@ -388,93 +392,127 @@
 
                 <!-- 실 컨텐츠 -->
                 <div class="container-fluid">
-                    <div class="row row-30">
-                        <div class="col-12 col-lg-7">
-                            <div class="h-100">
-                                <div class="row justify-content-between mb-2">
-                                    <div class="col-auto">
-                                        <h3 class="title">졍합성 마스트</h3>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button type="button" class="btn btn-primary min-width">추가</button>
-                                        <button type="button" class="btn btn-primary min-width ml-1">삭제</button>
-                                    </div>
+                    <div class="status">
+                        <div class="row">
+                            <div class="col-4 col-lg-3 col-xl">
+                                <div class="box">
+                                    <div>경보현황</div>
                                 </div>
-                                <div class="table-dark mb-3">
-                                    <div>
-                                        jqgrid
-                                    </div>
+                            </div>
+                            <div class="col-4 col-lg-3 col-xl">
+                                <div class="box bg-warning" data-toggle="tooltip" data-placement="bottom" title="주의">
+                                    <div>배치점검</div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-lg-3 col-xl">
+                                <div class="box">
+                                    <div>수기점검</div>
+                                </div>
+                            </div>
+                            <div class="col-4 col-lg-3 col-xl">
+                                <div class="box">
+                                    <div>타임아웃</div>
                                 </div>
                             </div>
                         </div>
-                        <div class="col-12 col-lg-5 h-100">
-                            <div class="row align-items-center justify-content-between mb-2">
-                                <div class="col-auto">
-                                    <h3 class="title">세부정보</h3>
-                                </div>
-                                <div class="col-auto">
+                    </div>
 
+                    <nav class="tab-swiper">
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="#tab1" class="nav-link item active">경보현황</a>
                                 </div>
-                            </div>
-                            <div class="card card-navy">
-                                <div class="card-header bg-dark">
-                                    <div class="row align-items-center justify-content-between">
-                                        <div class="col-auto">
-                                            <h4 class="card-title">Expression</h4>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-sm btn-info"><i class="material-icons">add</i> 추가</button>
-                                            <button type="button" class="btn btn-sm btn-info ml-1"><i class="material-icons">remove</i> 삭제</button>
-                                        </div>
-                                    </div>
+                                <div class="swiper-slide">
+                                    <a href="#tab2" class="item">배치점검</a>
                                 </div>
-                                <div class="card-body">
-                                    <div class="form-group row mb-2">
-                                        <label for="" class="col-sm-3 col-xl-2 col-form-label col-form-label-sm">관제코드</label>
-                                        <div class="col">
-                                            <input type="text" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-xl-2 col-form-label col-form-label-sm">관제명</label>
-                                        <div class="col">
-                                            <input type="text" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                    <div class="table-dark">
-                                        <div>
-                                            jqgrid
-                                        </div>
-                                    </div>
+                                <div class="swiper-slide">
+                                    <a href="#tab3" class="item">수기점검</a>
                                 </div>
-                            </div>
-                            <div class="card card-navy">
-                                <div class="card-header bg-dark">
-                                    <div class="row align-items-center justify-content-between">
-                                        <div class="col-auto">
-                                            <h4 class="card-title">Operand</h4>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-sm btn-info"><i class="material-icons">add</i> 추가</button>
-                                            <button type="button" class="btn btn-sm btn-info ml-1"><i class="material-icons">remove</i> 삭제</button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="table-dark">
-                                        <div>
-                                            jqgrid
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-between align-items-center mt-3">
-                                <div class="col-auto">* Operand = V1 + V2 + V3</div>
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-gray min-width" onclick="document.location.href='data_consistency_detail.html'">데이터</button>
+                                <div class="swiper-slide">
+                                    <a href="#tab4" class="item">타임아웃</a>
                                 </div>
                             </div>
                         </div>
+                    </nav>
+                    <div class="tab-content">
+                        <div class="tab-pane show active" id="tab1">
+                            <table class="table table-dark table-striped table-hover">
+                                <thead>
+                                    <tr>
+                                        <th class="text-center">발생시간</th>
+                                        <th class="text-center">업무명</th>
+                                        <th class="text-center">상태</th>
+                                        <th class="text-center">건수</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌 계좌뱅킹_계좌 계좌뱅킹_계좌 계좌뱅킹_계좌 계좌뱅킹_계좌 계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="text-center">2020-11-20 12:20:12</td>
+                                        <td class="text-left">계좌뱅킹_계좌</td>
+                                        <td class="text-center">주의</td>
+                                        <td class="text-center">30건</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="tab-pane" id="tab2">...2</div>
+                        <div class="tab-pane" id="tab3">...3</div>
+                        <div class="tab-pane" id="tab4">...4</div>
                     </div>
                 </div>
                 <!-- //실 컨텐츠 -->
@@ -506,7 +544,17 @@
     <script src="../../resources/js/ui.js"></script>
 
     <script>
-        $(document).ready(function(){
+        $(document).ready(function () {
+            $('.tab-swiper .item').on('click',function(e){
+                e.preventDefault();
+                var target = $(this).attr('href');
+
+                $(this).parent().siblings().find('.item').removeClass('active');
+                $(this).addClass('active');
+
+                $(target).siblings('.tab-pane').removeClass('active').removeClass('show');
+                $(target).addClass('show').addClass('active');
+            });
         });
     </script>
 </body>

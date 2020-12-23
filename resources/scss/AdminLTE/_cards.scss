@@ -12,7 +12,7 @@
 }
 
 .card {
-  @include box-shadow($card-shadow);
+  //@include box-shadow($card-shadow);
   margin-bottom: map-get($spacers, 3);
 
   &.bg-dark {
@@ -212,9 +212,9 @@ html.maximized-card {
   padding: (($card-spacer-y / 2) * 2) $card-spacer-x;
   position: relative;
 
-  @if $enable-rounded {
+  /* @if $enable-rounded {
     @include border-top-radius($border-radius);
-  }
+  } */
 
   .collapsed-card & {
     border-bottom: 0;

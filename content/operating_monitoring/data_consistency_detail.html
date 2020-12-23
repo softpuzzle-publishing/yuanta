@@ -49,7 +49,7 @@
                 <li class="nav-item d-none d-xl-block">
                     <ol class="breadcrumb">
                         <li class="breadcrumb-item">운영모니터링</li>
-                        <li class="breadcrumb-item active">데이터 정합성</li>
+                        <li class="breadcrumb-item active">데이터 정합성 뷰</li>
                     </ol>
                 </li>
             </ul>
@@ -378,7 +378,7 @@
             <div class="content-header d-xl-none">
                 <ol class="breadcrumb">
                     <li class="breadcrumb-item">운영모니터링</li>
-                    <li class="breadcrumb-item active">데이터 정합성</li>
+                    <li class="breadcrumb-item active">데이터 정합성 뷰</li>
                 </ol>
             </div>
             <!-- /.content-header -->
@@ -388,94 +388,166 @@
 
                 <!-- 실 컨텐츠 -->
                 <div class="container-fluid">
-                    <div class="row row-30">
-                        <div class="col-12 col-lg-7">
-                            <div class="h-100">
-                                <div class="row justify-content-between mb-2">
-                                    <div class="col-auto">
-                                        <h3 class="title">졍합성 마스트</h3>
+                    <div class="bg-navy p-3 mb-3">
+                        <div class="row row-30">
+                            <div class="col-12 col-xl-3">
+                                <div class="card card-navy">
+                                    <div class="card-header d-none d-xl-block">
+                                        <h4 class="card-title text-transparent">정합성 상세</h4>
                                     </div>
-                                    <div class="col-auto">
-                                        <button type="button" class="btn btn-primary min-width">추가</button>
-                                        <button type="button" class="btn btn-primary min-width ml-1">삭제</button>
-                                    </div>
-                                </div>
-                                <div class="table-dark mb-3">
-                                    <div>
-                                        jqgrid
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-12 col-lg-5 h-100">
-                            <div class="row align-items-center justify-content-between mb-2">
-                                <div class="col-auto">
-                                    <h3 class="title">세부정보</h3>
-                                </div>
-                                <div class="col-auto">
-
-                                </div>
-                            </div>
-                            <div class="card card-navy">
-                                <div class="card-header bg-dark">
-                                    <div class="row align-items-center justify-content-between">
-                                        <div class="col-auto">
-                                            <h4 class="card-title">Expression</h4>
+                                    <div class="card-body p-0">
+                                        <div class="form-group row mb-2">
+                                            <label for="" class="col-sm-3 col-form-label col-form-label-sm">관제코드</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
                                         </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-sm btn-info"><i class="material-icons">add</i> 추가</button>
-                                            <button type="button" class="btn btn-sm btn-info ml-1"><i class="material-icons">remove</i> 삭제</button>
+                                        <div class="form-group row mb-2">
+                                            <label for="" class="col-sm-3 col-form-label col-form-label-sm">생성자</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="form-group row mb-2">
-                                        <label for="" class="col-sm-3 col-xl-2 col-form-label col-form-label-sm">관제코드</label>
-                                        <div class="col">
-                                            <input type="text" class="form-control form-control-sm">
+                                        <div class="form-group row mb-2">
+                                            <label for="" class="col-sm-3 col-form-label col-form-label-sm">생성날짜</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="form-group row">
-                                        <label for="" class="col-sm-3 col-xl-2 col-form-label col-form-label-sm">관제명</label>
-                                        <div class="col">
-                                            <input type="text" class="form-control form-control-sm">
-                                        </div>
-                                    </div>
-                                    <div class="table-dark">
-                                        <div>
-                                            jqgrid
+                                        <div class="form-group row mb-2">
+                                            <label for="" class="col-sm-3 col-form-label col-form-label-sm">관제명</label>
+                                            <div class="col-sm-9">
+                                                <input type="text" class="form-control form-control-sm">
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="card card-navy">
-                                <div class="card-header bg-dark">
-                                    <div class="row align-items-center justify-content-between">
-                                        <div class="col-auto">
-                                            <h4 class="card-title">Operand</h4>
-                                        </div>
-                                        <div class="col-auto">
-                                            <button type="button" class="btn btn-sm btn-info"><i class="material-icons">add</i> 추가</button>
-                                            <button type="button" class="btn btn-sm btn-info ml-1"><i class="material-icons">remove</i> 삭제</button>
+                            <div class="col-12 col-xl-9">
+                                <div class="row row-40 align-items-center">
+                                    <div class="col-12 col-sm">
+                                        <div class="card card-navy">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Expression</h4>
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <table class="table table-dark table-striped table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-center">관제코드</th>
+                                                            <th class="text-center">관제명</th>
+                                                            <th class="text-center">사칙연산</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">CAP1P001</td>
+                                                            <td class="text-left">주식예탁자산</td>
+                                                            <td class="text-center">+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">CAP1P001</td>
+                                                            <td class="text-left">채권예탁자산</td>
+                                                            <td class="text-center">+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">CAP1P001</td>
+                                                            <td class="text-left">수익증권</td>
+                                                            <td class="text-center">+</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="card-body">
-                                    <div class="table-dark">
-                                        <div>
-                                            jqgrid
+                                    <div class="col-12 col-sm-auto text-center">
+                                        <i class="fas fa-equals"></i>
+                                    </div>
+                                    <div class="col-12 col-sm">
+                                        <div class="card card-navy">
+                                            <div class="card-header">
+                                                <h4 class="card-title">Operand</h4>
+                                            </div>
+                                            <div class="card-body p-0">
+                                                <table class="table table-dark table-striped table-hover">
+                                                    <thead>
+                                                        <tr>
+                                                            <th class="text-center">관제코드</th>
+                                                            <th class="text-center">관제명</th>
+                                                            <th class="text-center">사칙연산</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td class="text-center">CAP1P001</td>
+                                                            <td class="text-left">주식예탁자산</td>
+                                                            <td class="text-center">+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">CAP1P001</td>
+                                                            <td class="text-left">채권예탁자산</td>
+                                                            <td class="text-center">+</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td class="text-center">CAP1P001</td>
+                                                            <td class="text-left">수익증권</td>
+                                                            <td class="text-center">+</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="row justify-content-between align-items-center mt-3">
-                                <div class="col-auto">* Operand = V1 + V2 + V3</div>
-                                <div class="col-auto">
-                                    <button type="button" class="btn btn-gray min-width" onclick="document.location.href='data_consistency_detail.html'">데이터</button>
                                 </div>
                             </div>
                         </div>
                     </div>
+                    <table class="table table-dark table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th class="text-center">체크시간</th>
+                                <th class="text-center">Operand</th>
+                                <th class="text-center">Expression</th>
+                                <th class="text-center">피연산 값</th>
+                                <th class="text-center">연산 값</th>
+                                <th class="text-center">보정비율</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="text-center">2020-11-20 12:20:12</td>
+                                <td class="text-center">A111(주식예탁자산)</td>
+                                <td class="text-center">A1212+A1213</td>
+                                <td class="text-center">34,646.13</td>
+                                <td class="text-center">34,646.13</td>
+                                <td class="text-center">0.3</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2020-11-20 12:20:12</td>
+                                <td class="text-center">A111(주식예탁자산)</td>
+                                <td class="text-center">A1212+A1213</td>
+                                <td class="text-center">34,646.13</td>
+                                <td class="text-center">34,646.13</td>
+                                <td class="text-center">0.3</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2020-11-20 12:20:12</td>
+                                <td class="text-center">A111(주식예탁자산)</td>
+                                <td class="text-center">A1212+A1213</td>
+                                <td class="text-center">34,646.13</td>
+                                <td class="text-center">34,646.13</td>
+                                <td class="text-center">0.3</td>
+                            </tr>
+                            <tr>
+                                <td class="text-center">2020-11-20 12:20:12</td>
+                                <td class="text-center">A111(주식예탁자산)</td>
+                                <td class="text-center">A1212+A1213</td>
+                                <td class="text-center">34,646.13</td>
+                                <td class="text-center">34,646.13</td>
+                                <td class="text-center">0.3</td>
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
                 <!-- //실 컨텐츠 -->
 

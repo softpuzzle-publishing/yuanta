@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>유안타증권 운영관제 Guide - Popup</title>
+
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+
+    <!-- Icon Fontawasome -->
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <!-- Icon Material -->
+    <link rel="stylesheet" href="../../resources/plugins/material-icons/material-icons.css">
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+    <!-- jqgrid -->
+    <link rel="stylesheet" href="../../resources/plugins/jqgrid/css/ui.jqgrid.css">
+    <!-- chartjs -->
+    <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
+    <!-- Bootstrap & Template style -->
+    <link rel="stylesheet" href="../../resources/css/AdminLTE.css">
+    <!-- Yuanta style -->
+    <link rel="stylesheet" href="../../resources/css/yuanta.css">
+    <!-- Additional style -->
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+</head>
+
+<body class="body-popup">
+    <!-- 실 컨텐츠 -->
+    <div class="popup-wrap">
+        <div class="popup-header">
+            <h1 class="popup-title">운영관제 경보내역 - 파생</h1>
+            <a href="#" class="popup-close" onclick="window.close()">
+                <i class="icon-close"><span class="sr-only">팝업 닫기</span></i>
+            </a>
+        </div>
+        <div class="popup-body">
+            <div class="inquiry-area">
+                <div class="form-inline">
+                    <div class="d-sm-flex align-items-center my-1 mr-sm-4">
+                        <label for="" class="mr-sm-3">일자</label>
+                        <input type="text" class="form-control" placeholder="YYYY-MM-DD" data-event="datepicker">
+                    </div>
+                    <div class="d-sm-flex align-items-center my-1 mr-sm-4">
+                        <label for="" class="mr-sm-3">업무구분</label>
+                        <select name="" id="" class="form-control">
+                            <option value="">카테고리 선택</option>
+                        </select>
+                    </div>
+                    <button type="button" class="btn btn-purple min-width btn-form-search">조회</button>
+                </div>
+            </div>
+
+            <table class="table table-light">
+                <thead>
+                    <tr>
+                        <th class="text-center">관제코드</th>
+                        <th class="text-center">관제명</th>
+                        <th class="text-center">장애등급</th>
+                        <th class="text-center">장애판단기준</th>
+                        <th class="text-center">담당자</th>
+                        <th class="text-center">발생시간</th>
+                        <th class="text-center">업무구분</th>
+                        <th class="text-center">조치현황</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="text-center">AAPBK001AAPBK001</td>
+                        <td class="text-left">뱅킹 온라인 배치점검</td>
+                        <td class="text-center">주의</td>
+                        <td class="text-left">ACS_SMS처리 내역 지연 여부 실시간 처리대기내역>=50이상,배치처리>=10,000</td>
+                        <td class="text-center">홍길동</td>
+                        <td class="text-center">14:41:21</td>
+                        <td class="text-center">AP</td>
+                        <td class="text-center">
+                            <input type="text" class="form-control form-control-sm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">AAPBK001AAPBK001</td>
+                        <td class="text-left">뱅킹 온라인 배치점검</td>
+                        <td class="text-center">주의</td>
+                        <td class="text-left">ACS_SMS처리 내역 지연 여부 실시간 처리대기내역>=50이상,배치처리>=10,000</td>
+                        <td class="text-center">홍길동</td>
+                        <td class="text-center">14:41:21</td>
+                        <td class="text-center">AP</td>
+                        <td class="text-center">
+                            <input type="text" class="form-control form-control-sm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">AAPBK001AAPBK001</td>
+                        <td class="text-left">뱅킹 온라인 배치점검</td>
+                        <td class="text-center">주의</td>
+                        <td class="text-left">ACS_SMS처리 내역 지연 여부 실시간 처리대기내역>=50이상,배치처리>=10,000</td>
+                        <td class="text-center">홍길동</td>
+                        <td class="text-center">14:41:21</td>
+                        <td class="text-center">AP</td>
+                        <td class="text-center">
+                            <input type="text" class="form-control form-control-sm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">AAPBK001AAPBK001</td>
+                        <td class="text-left">뱅킹 온라인 배치점검</td>
+                        <td class="text-center">주의</td>
+                        <td class="text-left">ACS_SMS처리 내역 지연 여부 실시간 처리대기내역>=50이상,배치처리>=10,000</td>
+                        <td class="text-center">홍길동</td>
+                        <td class="text-center">14:41:21</td>
+                        <td class="text-center">AP</td>
+                        <td class="text-center">
+                            <input type="text" class="form-control form-control-sm">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="text-center">AAPBK001AAPBK001</td>
+                        <td class="text-left">뱅킹 온라인 배치점검</td>
+                        <td class="text-center">주의</td>
+                        <td class="text-left">ACS_SMS처리 내역 지연 여부 실시간 처리대기내역>=50이상,배치처리>=10,000</td>
+                        <td class="text-center">홍길동</td>
+                        <td class="text-center">14:41:21</td>
+                        <td class="text-center">AP</td>
+                        <td class="text-center">
+                            <input type="text" class="form-control form-control-sm">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <div class="mb-2"><strong>등록내용</strong></div>
+            <textarea name="" id="" cols="" rows="2" class="form-control" style="width:100%;"></textarea>
+            <div class="mb-2 mt-3"><strong>오류현황</strong></div>
+            <textarea name="" id="" cols="" rows="2" class="form-control" style="width:100%;"></textarea>
+            <div class="hr"></div>
+            <div class="mt-3 d-flex justify-content-end">
+                <button type="button" class="btn btn-lg btn-primary min-width">저장</button>
+            </div>
+        </div>
+    </div>
+    <!-- //실 컨텐츠 -->
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.min.js"></script>
+    <!-- jqgrid -->
+    <script src="../../resources/plugins/jqgrid/js/jquery.jqGrid.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart.js/Chart.min.js"></script>
+    <!-- ui -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+        });
+    </script>
+</body>
+
+</html>

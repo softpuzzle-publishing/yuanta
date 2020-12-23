@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+
+    <title>유안타증권 운영관제 Guide</title>
+
+    <link rel="icon" href="../../resources/images/favicon-32.png" sizes="32x32">
+    <link rel="icon" href="../../resources/images/favicon-128.png" sizes="128x128">
+
+    <!-- Icon Fontawasome -->
+    <link rel="stylesheet" href="../../resources/plugins/fontawesome-free/css/all.min.css">
+    <!-- Icon Material -->
+    <link rel="stylesheet" href="../../resources/plugins/material-icons/material-icons.css">
+
+    <!-- Jquery UI -->
+    <link rel="stylesheet" href="../../resources/plugins/jquery-ui/jquery-ui.css">
+    <!-- jqgrid -->
+    <link rel="stylesheet" href="../../resources/plugins/jqgrid/css/ui.jqgrid.css">
+    <!-- chartjs -->
+    <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="../../resources/plugins/swiper-5.2.1/css/swiper.min.css">
+    <!-- Bootstrap & Template style -->
+    <link rel="stylesheet" href="../../resources/css/AdminLTE.css">
+    <!-- Yuanta style -->
+    <link rel="stylesheet" href="../../resources/css/yuanta.css">
+    <!-- Additional style -->
+    <link rel="stylesheet" href="../../resources/css/additional.css">
+
+    <style>
+        #guide{overflow: hidden;}
+        section{float: left;padding: 15px;width: 50%;}
+        h2{margin-bottom: 15px;font-size: 24px !important;}
+        h3{font-size: 18px !important;}
+        div + h3{margin-top: 1rem;}
+        @media (max-width: 991.98px){
+            section{width: 100%;padding: 15px 10px;}
+        }
+    </style>
+</head>
+
+<body class="sidebar-mini">
+    <div class="wrapper">
+
+        <!-- Navbar -->
+        <nav class="main-header navbar navbar-expand navbar-dark navbar-navy">
+            <!-- Mobile logo -->
+            <a href="../dashboard/dashboard.html" class="brand-logo-mobile d-lg-none">
+                <i class="icon-logo"><span class="sr-only">유안타증권</span></i>
+            </a>
+
+            <!-- Left navbar links -->
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="#" data-widget="pushmenu" role="button"><i class="material-icons">menu</i></a>
+                </li>
+            </ul>
+
+            <!-- Right navbar links -->
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown nav-my">
+                    <a class="nav-link d-none d-lg-inline-block" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <span class="role">
+                            <span class="role-admin">Admin</span>
+                            <!-- <span class="role-user">User</span>
+                            <span class="role-op">OP</span>
+                            <span class="role-monitoring">Monitoring</span> -->
+                        </span>
+                        <span class="name">홍길동</span>
+                    </a>
+                    <a class="nav-link d-lg-none" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="material-icons">person</i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right">
+                        <div class="dropdown-item d-lg-none">
+                            <span class="role">
+                                <span class="role-admin">Admin</span>
+                                <!-- <span class="role-user">User</span>
+                                <span class="role-op">OP</span>
+                                <span class="role-monitoring">Monitoring</span> -->
+                            </span>
+                            <span class="name">홍길동</span>
+                        </div>
+                        <a href="#" class="dropdown-item"><i class="material-icons">assignment</i> 관제게시판</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"><i class="material-icons">person</i> 프로필 수정</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item"><i class="material-icons">history</i> 접속 히스토리</a>
+                        <div class="dropdown-divider"></div>
+                        <a href="../login/login.html" class="dropdown-item"><i class="material-icons">exit_to_app</i> 로그아웃</a>
+                    </div>
+                </li>
+                <li class="nav-item nav-access d-none d-lg-block">
+                    <div class="access-info">최근접속정보 : 2020.11.24  오후 05:12:12</div>
+                </li>
+                <li class="nav-item nav-fullscreen mr-n3 d-none d-lg-block">
+                    <a class="nav-link" href="#">
+                        <i class="material-icons">fullscreen</i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown nav-noti">
+                    <a class="nav-link" data-toggle="dropdown" href="#" aria-expanded="false">
+                        <i class="material-icons">notifications</i>
+                        <span class="badge badge-danger navbar-badge"></span>
+                        <span class="circle"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-xl dropdown-menu-right">
+                        <a href="#" class="dropdown-item">
+                            <span class="text">[공지] 알려드립니다. 금융정보에 경고알람이 생겼습니다.</span>
+                            <span class="text-sm">20-10-10 13:43:32</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <span class="text">[공지] 알려드립니다. 금융정보에 경고알람이 생겼습니다.</span>
+                            <span class="text-sm">20-10-10 13:43:32</span>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a href="#" class="dropdown-item">
+                            <span class="text">[공지] 알려드립니다. 금융정보에 경고알람이 생겼습니다.</span>
+                            <span class="text-sm">20-10-10 13:43:32</span>
+                        </a>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- /.navbar -->
+
+        <!-- Main Sidebar Container -->
+        <aside class="main-sidebar sidebar-dark-primary elevation-4">
+            <!-- Brand Logo -->
+            <a href="../dashboard/dashboard.html" class="brand-link d-none d-lg-block">
+                <span class="in">
+                    <img src="../../resources/images/ic-logo-bi.svg" alt="유안타증권 Logo" class="brand-image">
+                    <span class="brand-text font-weight-light"><img src="../../resources/images/ic-logo-text.svg" alt="유안타증권"></span>
+                </span>
+            </a>
+
+            <!-- Mobile logo & Close -->
+            <div class="sidebar-top-mobile d-lg-none">
+                <a href="../dashboard/dashboard.html" class="brand-logo-mobile d-lg-none">
+                    <i class="icon-logo"><span class="sr-only">유안타증권</span></i>
+                </a>
+                <a href="#" class="sidebar-close"><i class="material-icons">close</i></a>
+            </div>
+
+
+            <!-- Sidebar -->
+            <div class="sidebar">
+                <!-- Sidebar Menu -->
+                <nav>
+                    <ul class="nav nav-sidebar flex-column nav-flat" data-widget="treeview" role="menu" data-accordion="true">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link active">
+                                <i class="nav-icon material-icons">dashboard</i>
+                                <p>
+                                    대시보드
+                                </p>
+                            </a>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon material-icons">leaderboard</i>
+                                <p>
+                                    운영모니터링
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>업무별 현재상황 조회</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>온라인 주요 TR현황</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>온라인 이상 징후</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>HTS Queue 현황</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>NMS</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>해외/기타 FEP</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>미들웨어</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>온라인업무</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>데이터 정합성</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon material-icons">search</i>
+                                <p>
+                                    분석
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>시스템 이상징후</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>타임아웃현황</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>반영목록 작동 조회</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Zenius</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>TMAX</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>FramePlus</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>Control-M</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>시스템로그 통합조회</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon material-icons">record_voice_over</i>
+                                <p>
+                                    대응
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>운영관제경보내역 관리</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon material-icons">handyman</i>
+                                <p>
+                                    운영관리
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>운영관제코드 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>운영관제 SMS통보 정책</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>운영관제 영향도 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>운영 데이터 증가추이</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>사용자 관리</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="nav-item has-treeview">
+                            <a href="#" class="nav-link">
+                                <i class="nav-icon material-icons">settings</i>
+                                <p>
+                                    시스템관리
+                                    <i class="icon-arrow-down right"></i>
+                                </p>
+                            </a>
+                            <ul class="nav nav-treeview">
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>사용자 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>개인정보관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>권한관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>코드 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>시스템일일점검</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>관제게시판</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>SMS 발송내역</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>연락처 관리</p>
+                                    </a>
+                                </li>
+                                <li class="nav-item">
+                                    <a href="#" class="nav-link">
+                                        <p>라이선스</p>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- /.sidebar-menu -->
+            </div>
+            <!-- /.sidebar -->
+        </aside>
+
+        <!-- Content Wrapper. Contains page content -->
+        <div class="content-wrapper">
+
+            <!-- Main content -->
+            <div class="content">
+
+                <!-- 실 컨텐츠 -->
+                <div class="container-fluid">
+                    <div class="dashboard">
+                        <div class="row dashboard-row">
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="info-box">
+                                    <div class="name">Access Notables</div>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                    	<div class="fluctuations">
+                                    	    <em>+79</em>
+                                    	    <i class="material-icons text-danger">trending_down</i>
+                                        </div>
+                                        <strong class="text-danger">271</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="info-box">
+                                    <div class="name">Access Notables</div>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                    	<div class="fluctuations">
+                                    	    <em>+79</em>
+                                    	    <i class="material-icons text-primary">trending_up</i>
+                                        </div>
+                                        <strong class="text-primary">5000</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="info-box">
+                                    <div class="name">Access Notables</div>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                    	<div class="fluctuations">
+
+                                        </div>
+                                        <strong class="text-white">99K</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-sm-6 col-lg-3">
+                                <div class="info-box">
+                                    <div class="name">Access Notables</div>
+                                    <div class="d-flex justify-content-between align-items-end">
+                                    	<div class="fluctuations">
+                                    	    <em>+79</em>
+                                    	    <i class="material-icons text-danger">trending_down</i>
+                                        </div>
+                                        <strong class="text-danger">271</strong>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 대고객채널 접속현황 -->
+                            <div class="col-12 col-lg-6 col-xl-3" data-role="dashboard-item">
+                                <div class="card card-navy">
+                                    <div class="card-header">
+                                        <div class="card-title">대고객채널 접속현황</div>
+                                        <a href="#" class="btn-col-remove"><i class="material-icons">remove_circle_outline</i></a>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <table class="table table-dark table-fixed">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">채널</th>
+                                                    <th class="text-center">평균접속</th>
+                                                    <th class="text-center">동시접속</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">티레이더</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">1,355</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">티레이더</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">1,355</td>
+                                                </tr>
+                                                <tr class="bg-danger">
+                                                    <td class="text-center">티레이더M</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">222,355</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">smart W</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">1,355</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">WTS</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">11,355</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 주요업무현황 -->
+                            <div class="col-12 col-lg-12 col-xl-6 order-first order-xl-0" data-role="dashboard-item">
+                                <div class="card card-navy">
+                                    <div class="card-header">
+                                        <div class="row justify-content-between">
+                                            <div class="col-auto">
+                                                <div class="card-title">주요업무현황</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="task-status-legend">
+                                                    <span class="circle bg-warning"></span>
+                                                    <span class="txt">주의</span>
+                                                    <span class="circle bg-orange"></span>
+                                                    <span class="txt">경고</span>
+                                                    <span class="circle bg-danger"></span>
+                                                    <span class="txt">장애</span>
+                                                    <span class="circle bg-info"></span>
+                                                    <span class="txt">영향</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-col-remove"><i class="material-icons">remove_circle_outline</i></a>
+                                    </div>
+                                    <div class="card-body pt-0">
+                                        <div class="task-status">
+                                            <ul>
+                                                <li><a href="#" class="bg-warning">고객계좌</a></li>
+                                                <li><a href="#" class="bg-orange">뱅킹</a></li>
+                                                <li><a href="#" class="bg-danger">경영</a></li>
+                                                <li><a href="#" class="bg-info">금융</a></li>
+                                                <li><a href="#">고객계좌</a></li>
+                                                <li><a href="#">뱅킹</a></li>
+                                                <li><a href="#">경영</a></li>
+                                                <li><a href="#">금융</a></li>
+                                                <li><a href="#">고객계좌</a></li>
+                                                <li><a href="#">뱅킹</a></li>
+                                                <li><a href="#">경영</a></li>
+                                                <li><a href="#">금융</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 운영관제 점검 & 유지보수 점검 -->
+                            <div class="col-12 col-lg-6 col-xl-3">
+                                <div class="h-50 pb-2 pb-lg-0" data-role="dashboard-item">
+                                    <div class="card card-navy card-sm">
+                                        <div class="card-header bg-dark">
+                                            <div class="card-title">운영관제 점검</div>
+                                            <a href="#" class="btn-col-remove"><i class="material-icons">remove_circle_outline</i></a>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <table class="table table-dark table-fixed">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-left">아침점검</td>
+                                                        <td class="text-left">156 / 308</td>
+                                                        <td class="text-left">3 (3)5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left">운영점검</td>
+                                                        <td class="text-left">2,450 / 3,900</td>
+                                                        <td class="text-left">3 (3)5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left">퇴근점검</td>
+                                                        <td class="text-left">156 / 308</td>
+                                                        <td class="text-left">3 (3)5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left">야간점검</td>
+                                                        <td class="text-left">156 / 308</td>
+                                                        <td class="text-left">3 (3)5</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="h-50 pt-2 pt-lg-0" data-role="dashboard-item">
+                                    <div class="card card-navy card-sm">
+                                        <div class="card-header bg-dark">
+                                            <div class="card-title">유지보수 점검</div>
+                                            <a href="#" class="btn-col-remove"><i class="material-icons">remove_circle_outline</i></a>
+                                        </div>
+                                        <div class="card-body p-0">
+                                            <table class="table table-dark">
+                                                <tbody>
+                                                    <tr>
+                                                        <td class="text-left">아침점검</td>
+                                                        <td class="text-left">156 / 308</td>
+                                                        <td class="text-left">3 (3)5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left">운영점검</td>
+                                                        <td class="text-left">2,450 / 3,900</td>
+                                                        <td class="text-left">3 (3)5</td>
+                                                    </tr>
+                                                    <tr class="bg-info">
+                                                        <td class="text-left">퇴근점검</td>
+                                                        <td class="text-left">156 / 308</td>
+                                                        <td class="text-left">3 (3)5</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="text-left">야간점검</td>
+                                                        <td class="text-left">156 / 308</td>
+                                                        <td class="text-left">3 (3)5</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 내부채널 접속현황 -->
+                            <div class="col-12 col-lg-6 col-xl-3" data-role="dashboard-item">
+                                <div class="card card-navy">
+                                    <div class="card-header">
+                                        <div class="card-title">내부채널 접속현황</div>
+                                        <a href="#" class="btn-col-remove"><i class="material-icons">remove_circle_outline</i></a>
+                                    </div>
+                                    <div class="card-body p-0">
+                                        <table class="table table-dark table-fixed">
+                                            <thead>
+                                                <tr>
+                                                    <th class="text-center">채널</th>
+                                                    <th class="text-center">평균접속</th>
+                                                    <th class="text-center">동시접속</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td class="text-center">티레이더</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">1,355</td>
+                                                </tr>
+                                                <tr class="bg-warning">
+                                                    <td class="text-center">티레이더M</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">222,355</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">smart W</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">1,355</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">WTS</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">11,355</td>
+                                                </tr>
+                                                <tr>
+                                                    <td class="text-center">WTS</td>
+                                                    <td class="text-center">1,202</td>
+                                                    <td class="text-center">11,355</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 주요매체현황 -->
+                            <div class="col-12 col-lg-12 col-xl-6 order-first order-xl-0" data-role="dashboard-item">
+                                <div class="card card-navy">
+                                    <div class="card-header">
+                                        <div class="row justify-content-between">
+                                            <div class="col-auto">
+                                                <div class="card-title">주요매체현황</div>
+                                            </div>
+                                            <div class="col-auto">
+                                                <div class="task-status-legend">
+                                                    <span class="circle bg-warning"></span>
+                                                    <span class="txt">주의</span>
+                                                    <span class="circle bg-orange"></span>
+                                                    <span class="txt">경고</span>
+                                                    <span class="circle bg-danger"></span>
+                                                    <span class="txt">장애</span>
+                                                    <span class="circle bg-info"></span>
+                                                    <span class="txt">영향</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <a href="#" class="btn-col-remove"><i class="material-icons">remove_circle_outline</i></a>
+                                    </div>
+                                    <div class="card-body pt-0">
+                                        <div class="task-status">
+                                            <ul>
+                                                <li><a href="#" class="bg-warning">고객계좌</a></li>
+                                                <li><a href="#" class="bg-orange">뱅킹</a></li>
+                                                <li><a href="#" class="bg-danger">경영</a></li>
+                                                <li><a href="#" class="bg-info">금융</a></li>
+                                                <li><a href="#">고객계좌</a></li>
+                                                <li><a href="#">뱅킹</a></li>
+                                                <li><a href="#">경영</a></li>
+                                                <li><a href="#">금융</a></li>
+                                                <li><a href="#">고객계좌</a></li>
+                                                <li><a href="#">뱅킹</a></li>
+                                                <li><a href="#">경영</a></li>
+                                                <li><a href="#">금융</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 점검항목 & 시스템 인프라 -->
+                            <div class="col-12 col-lg-6 col-xl-3">
+                                <div class="h-50 pb-2" data-role="dashboard-item">
+                                    <div class="card card-navy card-sm">
+                                        <div class="card-header">
+                                            <div class="card-title">점검항목</div>
+                                            <a href="#" class="btn-col-remove"><i class="material-icons">remove_circle_outline</i></a>
+                                        </div>
+                                        <div class="card-body pt-0 pb-2">
+                                            <div class="task-status task-status-sm">
+                                                <ul>
+                                                    <li><a href="#">프레임</a></li>
+                                                    <li><a href="#">턱시도</a></li>
+                                                    <li><a href="#">배치</a></li>
+                                                    <li><a href="#">프로세스</a></li>
+                                                    <li><a href="#">대외</a></li>
+                                                    <li><a href="#">속도</a></li>
+                                                    <li><a href="#">서버</a></li>
+                                                    <li><a href="#">채널</a></li>
+                                                    <li><a href="#">정합성</a></li>
+                                                    <li><a href="#">게시</a></li>
+                                                    <li><a href="#">접속자</a></li>
+                                                    <li><a href="#">배포</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="h-50 pt-2" data-role="dashboard-item">
+                                    <div class="card card-navy card-sm">
+                                        <div class="card-header">
+                                            <div class="card-title">시스템 인프라</div>
+                                            <a href="#" class="btn-col-remove"><i class="material-icons">remove_circle_outline</i></a>
+                                        </div>
+                                        <div class="card-body pt-0 pb-2">
+                                            <div class="task-status task-status-sm">
+                                                <ul>
+                                                    <li><a href="#">프레임</a></li>
+                                                    <li><a href="#">턱시도</a></li>
+                                                    <li><a href="#">배치</a></li>
+                                                    <li><a href="#">프로세스</a></li>
+                                                    <li><a href="#">대외</a></li>
+                                                    <li><a href="#">속도</a></li>
+                                                    <li><a href="#">서버</a></li>
+                                                    <li><a href="#">채널</a></li>
+                                                    <li><a href="#">정합성</a></li>
+                                                    <li><a href="#">게시</a></li>
+                                                    <li><a href="#">접속자</a></li>
+                                                    <li><a href="#">배포</a></li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- //실 컨텐츠 -->
+
+            </div>
+            <!-- /.content -->
+        </div>
+        <!-- /.content-wrapper -->
+
+    </div>
+
+    <!-- REQUIRED SCRIPTS -->
+
+    <!-- jQuery -->
+    <script src="../../resources/plugins/jquery/jquery.min.js"></script>
+    <!-- jQuery UI-->
+    <script src="../../resources/plugins/jquery-ui/jquery-ui.min.js"></script>
+    <!-- Bootstrap 4 -->
+    <script src="../../resources/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- AdminLTE App -->
+    <script src="../../resources/js/adminlte.min.js"></script>
+    <!-- jqgrid -->
+    <script src="../../resources/plugins/jqgrid/js/jquery.jqGrid.min.js"></script>
+    <!-- chartjs -->
+    <script src="../../resources/plugins/chart.js/Chart.min.js"></script>
+    <!-- swiper -->
+    <script src="../../resources/plugins/swiper-5.2.1/js/swiper.min.js"></script>
+    <!-- ui -->
+    <script src="../../resources/js/ui.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            //대시보드 컬럼이 윈도우에 꽉 차도록 min-height 셋팅
+            $(window).resize(function(){
+                minHeightSet();
+            });
+            minHeightSet();
+            function minHeightSet(){
+                var offsetTop = $('.dashboard-row').offset().top;
+                var winHeight = $(window).height();
+                console.log(offsetTop);
+                $('.dashboard-row').css('min-height', winHeight - offsetTop - 16);
+            }
+
+            //모바일에서 컬럼 삭제 버튼
+            $('.btn-col-remove').on('click',function(e){
+                e.preventDefault();
+                $(this).closest('[data-role="dashboard-item"]').addClass('is-hidden');
+                itemVisibleCheck();
+            });
+            //.is-hidden 두개 가지고 있는 컬럼에 .d-none.d-lg-block 추가
+            function itemVisibleCheck(){
+                $('.dashboard-row > [class^=col]').each(function(){
+                    if($(this).find('.is-hidden').length > 1){
+                        $(this).addClass('d-none d-lg-block');
+                    }
+                });
+            }
+
+            //상태표시등 클릭시 팝업 오픈
+            $('.task-status a').on('click',function(e){
+                e.preventDefault();
+                window.open('dashboard_detail.html', 'popup', 'width=1280, height=770, status=no, menubar=no, toolbar=no, resizable=no');
+            });
+
+            //전체화면 버튼
+            $('.nav-fullscreen a').on('click',function(e){
+                e.preventDefault();
+                if(!$('html').hasClass('is-fullscreen')){
+                    openFullScreenMode();
+                    $('html').addClass('is-fullscreen');
+                    $(this).find('i').text('fullscreen_exit');
+                }else{
+                    closeFullScreenMode();
+                    $('html').removeClass('is-fullscreen');
+                    $(this).find('i').text('fullscreen');
+                }
+            });
+        });
+
+        var docV = document.documentElement;
+        //전체화면 설정
+		function openFullScreenMode() {
+			if (docV.requestFullscreen)
+				docV.requestFullscreen();
+			else if (docV.webkitRequestFullscreen)
+				docV.webkitRequestFullscreen();
+			else if (docV.mozRequestFullScreen)
+				docV.mozRequestFullScreen();
+			else if (docV.msRequestFullscreen)
+				docV.msRequestFullscreen();
+        }
+        //전체화면 해제
+        function closeFullScreenMode() {
+            if (document.exitFullscreen)
+            document.exitFullscreen();
+            else if (document.webkitExitFullscreen)
+            document.webkitExitFullscreen();
+            else if (document.mozCancelFullScreen)
+            document.mozCancelFullScreen();
+            else if (document.msExitFullscreen)
+            document.msExitFullscreen();
+        }
+    </script>
+</body>
+
+</html>

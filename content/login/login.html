@@ -22,7 +22,7 @@
     <!-- chartjs -->
     <link rel="stylesheet" href="../../resources/plugins/chart.js/Chart.min.css">
     <!-- Bootstrap & Template style -->
-    <link rel="stylesheet" href="../../resources/css/AdminLte.css">
+    <link rel="stylesheet" href="../../resources/css/AdminLTE.css">
     <!-- Yuanta style -->
     <link rel="stylesheet" href="../../resources/css/yuanta.css">
     <!-- Additional style -->
@@ -50,7 +50,10 @@
                     </div>
                     <div class="form-group">
                         <label for="fPw">비밀번호</label>
-                        <input class="form-control form-control-lg" type="password" id="fPw">
+                        <div class="form-control-wrap">
+                            <input class="form-control form-control-lg" type="password" id="fPw">
+                            <a href="#" id="btn-eye"><i class="material-icons">visibility</i></a>
+                        </div>
                     </div>
                     <!-- 에러 메세지 -->
                     <div class="text-danger mb-4" style="display:none" id="msg-error">! 아이디 또는 비밀번호가 일치하지 않습니다</div>
@@ -90,6 +93,19 @@
 
             $('#btn-login').on('click',function(e){
                 $('#msg-error').show();
+            });
+
+            $('#btn-eye').on('click',function(e){
+                e.preventDefault();
+                if(!$(this).closest('.form-control-wrap').hasClass('show')){
+                    $(this).find('i').text('visibility_off');
+                    $(this).siblings('input').attr('type','text');
+                    $(this).closest('.form-control-wrap').addClass('show');
+                }else{
+                    $(this).find('i').text('visibility');
+                    $(this).siblings('input').attr('type','password');
+                    $(this).closest('.form-control-wrap').removeClass('show');
+                }
             });
         });
     </script>

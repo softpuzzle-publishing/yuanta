@@ -93,10 +93,7 @@ var Common = {
         }
 	},
 	top : function(){
-		$('.btn-top').on('click', function(e) {
-            e.preventDefault();
-            $('html, body').animate({scrollTop: 0}, 300);
-        });
+
 	},
 	sidebar : function(){
 		//mobile sidebar
@@ -115,7 +112,7 @@ var Common = {
 	},
 	tab : function(){
 		if($('.tab-swiper').length > 0){
-			const breakpoint = window.matchMedia( '(min-width:1279px)' );
+			const breakpoint = window.matchMedia( '(min-width:992px)' );
 
 			let tabSwiper;
 
@@ -131,6 +128,8 @@ var Common = {
 				tabSwiper = new Swiper('.tab-swiper .swiper-container', {
 					slidesPerView: 'auto',
 					freeMode: true,
+					slidesOffsetBefore: 16,
+					slidesOffsetAfter: 16
 				});
 			};
 			breakpoint.addListener(breakpointChecker);
@@ -138,6 +137,9 @@ var Common = {
 		}
 	},
 	event : function(){
+		//tooltip
+		$('[data-toggle="tooltip"]').tooltip();
+
 		//datepicker
 		$('[data-event="datepicker"]').datepicker({
 			changeMonth: true,

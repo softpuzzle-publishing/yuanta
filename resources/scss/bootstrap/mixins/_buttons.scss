@@ -15,6 +15,12 @@
     border-color: $hover-border;
   }
 
+  &.hover{
+    color: color-yiq($hover-background);
+    @include gradient-bg($hover-background);
+    border-color: $hover-border;
+  }
+
   &:focus,
   &.focus {
     // Avoid using mixin so we can pass custom focus shadow properly
