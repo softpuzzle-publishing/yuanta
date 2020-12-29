@@ -20,6 +20,10 @@ a.text-underline:hover { text-decoration: underline; }
 
 [data-event="datepicker"] { background-image: url("../images/icon-calendar.svg"); background-repeat: no-repeat; background-position: right .75rem top 50%; background-size: 14px auto; }
 
+[data-event="datepicker"][readonly] { background-color: #fff; }
+
+.form-control-plaintext { color: #495057; }
+
 select.form-control { padding-top: 5px; -webkit-appearance: none; -moz-appearance: none; background-position: right 13px top 50%; background-repeat: no-repeat; background-image: url("../images/select.svg"); padding-right: 35px; }
 
 .form-control-wrap { position: relative; }

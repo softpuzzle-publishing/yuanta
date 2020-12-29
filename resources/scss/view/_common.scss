@@ -22,6 +22,14 @@ a.text-underline:hover{text-decoration: underline;}
 
 [data-event="datepicker"]{
     background-image: url('../images/icon-calendar.svg');background-repeat: no-repeat;background-position: right .75rem top 50%;background-size: 14px auto;
+    &[readonly]{background-color: #fff;}
+}
+
+.form-control-plaintext{
+    color: $input-color;
+    .body-popup &{
+        .form-control-plaintext{}
+    }
 }
 
 select.form-control{
