@@ -4,12 +4,11 @@
 
 // COLORS
 // --------------------------------------------------------
-$lightblue: #3c8dbc !default;
-$navy: #2c2e3e !default;
+
 $gray-x-light: #d2d6de !default;
 
 $colors: map-merge((
-    'navy': $navy,
+    //'navy': $navy,
 ), $colors);
 
 // LAYOUT

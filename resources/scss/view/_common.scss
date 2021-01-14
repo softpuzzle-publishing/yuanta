@@ -543,13 +543,13 @@ div.table-light{border: 0;}
 }
 
 .inquiry-area{
-    background: rgba(224, 224, 224, 0.07);padding: 1rem;margin-bottom: 1rem;position: relative;
+    background: rgba(224, 224, 224, 0.071);padding: 1rem;margin-bottom: 1rem;position: relative;
     label{font-weight: 500;}
     .form-control{border-color: #223775;}
     .form-inline > .d-sm-flex{width: 100%;}
     .btn-form-search{margin: .25rem 0;width: 100%;}
     .body-popup &{
-        background: #f4f5f8;
+        background: #efefef;border: 1px solid #d2d2d2;
         .form-control{border-color: $input-border-color;}
     }
 }

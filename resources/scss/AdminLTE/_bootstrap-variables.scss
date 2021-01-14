@@ -42,37 +42,37 @@ $red:     #dc3545 !default;
 $orange:  #fd7e14 !default;
 $yellow:  #e6b239 !default;
 $green:   #56c488 !default;
-$teal:    #20c997 !default;
-$cyan:    #89adf5 !default;
-$sky:    #55afe3 !default;
+$teal:    #42afee !default;
+$cyan:    #00a5be !default;
 
 $colors: () !default;
 $colors: map-merge((
         "blue":       $blue,
-        //"indigo":     $indigo,
-        //"purple":     $purple,
-        //"pink":       $pink,
+        "indigo":     $indigo,
+        "purple":     $purple,
         "red":        $red,
         "orange":     $orange,
         "yellow":     $yellow,
         "green":      $green,
-        //"teal":       $teal,
-        //"cyan":       $cyan,
-        "sky":       $sky,
+        "teal":       $teal,
+        "cyan":       $cyan,
         "white":      $white,
         "gray":       $gray-600,
-        //"gray-dark":  $gray-800
 ), $colors);
 
 $primary:       $blue !default;
 $secondary:     $gray-600 !default;
 $success:       $green !default;
-$info:          $sky !default;
+$info:          $teal !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $gray:          #3f4862 !default;
 $dark:          #1d1f2d !default;
+$search:          #718ce5 !default;
+$navy:          #2c2e3e !default;
+$navylight:          #31549e !default;
+$navydark:          #505c7e !default;
 
 $theme-colors: () !default;
 $theme-colors: map-merge((
@@ -84,8 +84,11 @@ $theme-colors: map-merge((
         "danger":     $danger,
         "light":      $light,
         "gray":       $gray,
-        "dark":       $dark,
-        "purple":     $purple
+        "search":       $search,
+        "cyan":       $cyan,
+        "navy":       $navy,
+        "navylight":       $navylight,
+        "navydark":       $navydark,
 ), $theme-colors);
 // stylelint-enable
 
