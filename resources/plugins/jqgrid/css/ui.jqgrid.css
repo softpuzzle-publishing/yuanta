@@ -117,7 +117,8 @@
     overflow: hidden;
     position: absolute;
     display: inline;
-    cursor: pointer !important
+    cursor: pointer !important;
+    background-image: url("../../jquery-ui/images/ui-icons_ffffff_256x240.png")
 }
 
 .ui-jqgrid .ui-icon-asc {
